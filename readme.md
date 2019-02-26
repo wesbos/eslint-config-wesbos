@@ -26,7 +26,7 @@ npx install-peerdeps --global eslint-config-wesbos
 ```
 (**note:** npx is not a spelling mistake of **npm**. `npx` comes with when `node` and `npm` are installed and makes script running easier 😃)
 
-Then you need to make a global `.eslintrc` file"
+Then you need to make a global `.eslintrc` file:
 
 ESLint will look for one in your home directory
 
