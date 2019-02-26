@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wesbos",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "ESLint and Prettier Config from Wes Bos",
   "keywords": [
     "javascript",
@@ -15,21 +15,24 @@
   "author": "Wes bos <wes@wesbos.com>",
   "license": "MIT",
   "peerDependencies": {
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.14.1",
-    "babel-eslint": ">= 7",
-    "eslint-config-prettier": ">= 2",
-    "eslint-plugin-prettier": ">= 2",
-    "prettier": ">= 1.5"
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "prettier": "^1.16.4"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "prettier": "1.16.4"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-html": "^5.0.3",
+    "prettier": "^1.16.4"
   },
   "scripts": {
     "lint": "eslint .",

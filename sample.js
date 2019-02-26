@@ -1,0 +1,1 @@
+const age = 11;

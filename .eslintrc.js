@@ -130,7 +130,7 @@ module.exports = {
     ]
   },
   "plugins": [
-    // "html",
+    "html",
     "prettier"
   ]
 }
