@@ -6,6 +6,8 @@ You might like them - or you might not. Don't worry you can always change them.
 ## What it does
 * Lints JavaScript based on the latest standards
 * Fixes issues and formatting errors with Prettier
+* Lints + Fixes inside of html script tags
+* Lints + Fixes React via eslint-config-airbnb
 
 ## How to use
 
