@@ -24,7 +24,7 @@ First install everything needed:
 ```
 npx install-peerdeps --global eslint-config-wesbos
 ```
-(**note:** npx is not a spelling mistake of **npm**. npx comes when node and npm are installed and makes script-running easier 😃)
+(**note:** npx is not a spelling mistake of **npm**. `npx` comes with when `node` and `npm` are installed and makes script running easier 😃)
 
 Then you need to make a global `.eslintrc` file"
 
