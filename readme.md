@@ -30,7 +30,9 @@ npx install-peerdeps --dev eslint-config-wesbos
 
 start fresh. Sometimes global modules can goof you up. This will remove them all.
 
-`npm remove -g eslint-config-wesbos babel-eslint eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-html prettier eslint-config-airbnb`
+```
+npm remove -g eslint-config-wesbos babel-eslint eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier prettier
+```
 
 Then if you are using a local install, remove your `package-lock.json` file and delete the `node_modules/` directory.
 
