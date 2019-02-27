@@ -10,23 +10,60 @@ You might like them - or you might not. Don't worry you can always change them.
 * Lints + Fixes React via eslint-config-airbnb
 * You can see all the [rules here](https://github.com/wesbos/eslint-config-wesbos/blob/master/.eslintrc.js) - these generally abide by the code written in my courses. You are very welcome to overwrite any of these settings, or just fork the entire thing to create your own.
 
-## How to use
+## Installing
 
 You can use eslint globally and/or locally per project.
 
-I usually have something installed globally so whatever I'm doing is covered. Then, for projects that need their own config I install it locally and have that overwrite the global config as well as make it shareable to github.
+It's usually best to install this locally once per project, that way you can have project specific settings as well as sync those settings with others working on your project via git.
+
+I also install globally so that any project or rouge JS file I write will have linting and formatting applied without having to go through the setup. You might disagree and that is okay, just don't do it then 😃.
 
 
-### Globally
+## Local / Per Project Install
 
-First install everything needed:
+1. If you don't already have a `package.json` file, create one with `npm init`.
+
+2. Then we need to install everything needed by the config:
+
+```
+npx install-peerdeps --dev eslint-config-wesbos
+```
+
+3. You can see in your package.json there are now a big list of devDependencies.
+
+4. Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does). Your `.eslinttrc` file should look like this:
+
+```json
+{
+  "extends": [
+    "wesbos"
+  ]
+}
+```
+
+Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig":`. This makes one less file in your project.
+
+5. You can add two scripts to your package.json to lint and/or fix:
+
+```json
+"scripts": {
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix"
+},
+```
+
+6. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
+
+## Global Install
+
+1. First install everything needed:
 
 ```
 npx install-peerdeps --global eslint-config-wesbos
 ```
 (**note:** npx is not a spelling mistake of **npm**. `npx` comes with when `node` and `npm` are installed and makes script running easier 😃)
 
-Then you need to make a global `.eslintrc` file:
+2. Then you need to make a global `.eslintrc` file:
 
 ESLint will look for one in your home directory
 
@@ -43,30 +80,7 @@ In your `.eslintrc` file, it should look like this:
 }
 ```
 
-To use from the CLI, you can now run `eslint .` or configure your editor as we show later in these docs.
-
-### Locally / Per Project Basis
-
-1. If you don't already have a `package.json` file, create one with `npm init`.
-
-2. Then we need to install everything needed by the config:
-
-```
-npx install-peerdeps --dev eslint-config-wesbos
-```
-
-3. You can see in your package.json there are now a big list of devDependencies.
-
-4. You can add two scripts to your package.json to lint and/or fix:
-
-```json
-"scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
-},
-```
-
-Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
+3. To use from the CLI, you can now run `eslint .` or configure your editor as we show next.
 
 ## With VS Code
 
