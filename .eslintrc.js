@@ -132,6 +132,7 @@ module.exports = {
   },
   "plugins": [
     "html",
-    "prettier"
+    "prettier",
+    "react-hooks"
   ]
 }
