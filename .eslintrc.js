@@ -128,7 +128,9 @@ module.exports = {
           "invalidHref"
         ]
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "plugins": [
     "html",
