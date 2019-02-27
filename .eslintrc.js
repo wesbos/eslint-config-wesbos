@@ -114,10 +114,9 @@ module.exports = {
     ],
     "prettier/prettier": [
       "error",
+      {},
       {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 80,
+        "usePrettierrc": true
       }
     ],
     "jsx-a11y/href-no-hash": "off",
