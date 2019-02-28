@@ -31,7 +31,7 @@ npx install-peerdeps --dev eslint-config-wesbos
 
 3. You can see in your package.json there are now a big list of devDependencies.
 
-4. Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does). Your `.eslinttrc` file should look like this:
+4. Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does). Your `.eslintrc` file should look like this:
 
 ```json
 {
