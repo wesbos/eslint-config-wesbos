@@ -16,7 +16,7 @@ You can use eslint globally and/or locally per project.
 
 It's usually best to install this locally once per project, that way you can have project specific settings as well as sync those settings with others working on your project via git.
 
-I also install globally so that any project or rouge JS file I write will have linting and formatting applied without having to go through the setup. You might disagree and that is okay, just don't do it then 😃.
+I also install globally so that any project or rogue JS file I write will have linting and formatting applied without having to go through the setup. You might disagree and that is okay, just don't do it then 😃.
 
 
 ## Local / Per Project Install
