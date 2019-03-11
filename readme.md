@@ -81,7 +81,7 @@ npx install-peerdeps --dev eslint-config-wesbos
 echo "\nSuccess: Your project has been initialized with a Wes' eslint configuration"
 ```
 
-1. Copy this code, and save it in an appropriate place underthe filename "wbeslint.sh".
+1. Copy this code, and save it in an appropriate place under the filename "wbeslint.sh".
 
 2. Make the wbeslint.sh file executable.
 
@@ -89,7 +89,7 @@ echo "\nSuccess: Your project has been initialized with a Wes' eslint configurat
 chmod +x wbeslint.sh
 ```
 
-3. Also consider appending an alias in your preferred shell config (something like ~/.zshrc or ~/.bashrc) so you can forget about the path. The alias won't work in this shell window, so start a new one.
+3. Also consider appending an alias in your preferred shell config (something like ~/.zshrc or ~/.bashrc) so you can forget about the path. After adding it, the alias won't work in this shell window, so start a new one.
 
 ```
 alias wbeslint='sh ~/path/to/the/wbeslint.sh'
