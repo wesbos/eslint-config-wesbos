@@ -89,13 +89,13 @@ echo "\nSuccess: Your project has been initialized with a Wes' eslint configurat
 chmod +x wbeslint.sh
 ```
 
-3. Also consider appending an alias in your preferred shell config (something like ~/.zshrc or ~/.bashrc) so you can forget about the path. After adding it, the alias won't work in this shell window, so start a new one.
+3. Also consider appending an alias in your preferred shell config (something like ~/.zshrc or ~/.bashrc) so you can forget about the path.
 
 ```
 alias wbeslint='sh ~/path/to/the/wbeslint.sh'
 ```
 
-4. Now within the main project directory, simply type "wbeslint" and see the show.
+4. After adding it to the correct config, the alias won't work in this shell window, so start a new one. From you root project directory, and simply type "wbeslint" and see the show.
 
 ## Global Install
 
