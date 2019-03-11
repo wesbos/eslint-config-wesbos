@@ -95,7 +95,7 @@ chmod +x wbeslint.sh
 alias wbeslint='sh ~/path/to/the/wbeslint.sh'
 ```
 
-4. After adding it to the correct config, the alias won't work in this shell window, so start a new one. From you root project directory, and simply type "wbeslint" and see the show.
+4. After adding it to the correct config, the alias won't work in this shell window, so start a new one. From you root project directory, simply type "wbeslint" and see the show.
 
 ## Global Install
 
