@@ -82,7 +82,31 @@ In your `.eslintrc` file, it should look like this:
 
 3. To use from the CLI, you can now run `eslint .` or configure your editor as we show next.
 
+## Settings
+
+If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`.
+
+```js
+{
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "no-console": 2,
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 120,
+        "tabWidth": 8,
+      }
+    ]
+  }
+}
+```
+
 ## With VS Code
+
+You should read this entire thing. Serious!
 
 Once you have done one, or both, of the above installs. You probably want your editor to lint and fix for you. Here are the instructions for VS Code:
 
