@@ -117,8 +117,11 @@ Once you have done one, or both, of the above installs. You probably want your e
   ```js
     // These are all my auto-save configs
   "editor.formatOnSave": true,
-  // turn it off for JS, we will do this via eslint
+  // turn it off for JS and JSX, we will do this via eslint
   "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
     "editor.formatOnSave": false
   },
   // tell the ESLint plugin to run on save
