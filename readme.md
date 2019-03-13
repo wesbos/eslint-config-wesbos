@@ -124,9 +124,7 @@ Once you have done one, or both, of the above installs. You probably want your e
   // tell the ESLint plugin to run on save
   "eslint.autoFixOnSave": true,
   // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
-  "prettier.disableLanguages": [
-    "js"
-  ],
+  "prettier.disableLanguages": ["javascript", "javascriptreact"],
   ```
 
 ## 🤬🤬🤬🤬 ITS NOT WORKING
