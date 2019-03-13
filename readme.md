@@ -84,7 +84,7 @@ In your `.eslintrc` file, it should look like this:
 
 ## Settings
 
-If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`.
+If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`. Note that prettier rules overwrite anything in my config (trailing comma, and single quote), so you'll need to include those as well. 
 
 ```js
 {
@@ -96,6 +96,8 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
     "prettier/prettier": [
       "error",
       {
+        "trailingComma": "es5",
+        "singleQuote": true,
         "printWidth": 120,
         "tabWidth": 8,
       }
