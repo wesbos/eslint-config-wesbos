@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-wesbos",
+  "name": "eslint-config-fivetalent",
   "version": "0.0.19",
-  "description": "ESLint and Prettier Config from Wes Bos",
+  "description": "ESLint and Prettier Config",
   "keywords": [
     "javascript",
     "ecmascript",
@@ -11,8 +11,8 @@
     "prettier"
   ],
   "main": "index.js",
-  "repository": "git@github.com:wesbos/eslint-config-wesbos.git",
-  "author": "Wes bos <wes@wesbos.com>",
+  "repository": "git@github.com:fivetalent/eslint-config-fivetalent.git",
+  "author": "Jeff Finley <jeff.finley@fivetalent.com>",
   "license": "MIT",
   "peerDependencies": {
     "babel-eslint": "^9.0.0",
