@@ -47,8 +47,8 @@ Tip: You can alternatively put this object in your `package.json` under the prop
 
 ```json
 "scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
+  "lint": "eslint . --ext .js,.jsx",
+  "lint:fix": "eslint . --ext .js,.jsx --fix"
 },
 ```
 
