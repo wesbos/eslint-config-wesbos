@@ -127,6 +127,13 @@ Once you have done one, or both, of the above installs. You probably want your e
   ],
   ```
 
+## With Create React App
+
+1. You gotta eject first `npm run eject` or `yarn eject`
+1. run `npx install-peerdeps --dev eslint-config-wesbos`
+1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "wesbos"`
+
+
 ## 🤬🤬🤬🤬 ITS NOT WORKING
 
 start fresh. Sometimes global modules can goof you up. This will remove them all.
