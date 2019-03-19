@@ -84,7 +84,7 @@ In your `.eslintrc` file, it should look like this:
 
 ## Settings
 
-If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`.
+If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`. Note that prettier rules overwrite anything in my config (trailing comma, and single quote), so you'll need to include those as well. 
 
 ```js
 {
@@ -96,6 +96,8 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
     "prettier/prettier": [
       "error",
       {
+        "trailingComma": "es5",
+        "singleQuote": true,
         "printWidth": 120,
         "tabWidth": 8,
       }
@@ -115,16 +117,17 @@ Once you have done one, or both, of the above installs. You probably want your e
   ```js
     // These are all my auto-save configs
   "editor.formatOnSave": true,
-  // turn it off for JS, we will do this via eslint
+  // turn it off for JS and JSX, we will do this via eslint
   "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
     "editor.formatOnSave": false
   },
   // tell the ESLint plugin to run on save
   "eslint.autoFixOnSave": true,
   // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
-  "prettier.disableLanguages": [
-    "js"
-  ],
+  "prettier.disableLanguages": ["javascript", "javascriptreact"],
   ```
 
 ## With Create React App
