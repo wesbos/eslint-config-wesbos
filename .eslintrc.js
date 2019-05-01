@@ -37,7 +37,7 @@ module.exports = {
       1,
       {
         "ignoreSiblings": true,
-        "argsIgnorePattern": "res|next|^err"
+        "argsIgnorePattern": "res|next|^err|event|context|callback"
       }
     ],
     "prefer-const": [
