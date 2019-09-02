@@ -139,7 +139,7 @@ Once you have done one, or both, of the above installs. You probably want your e
 
 ## 🤬🤬🤬🤬 IT'S NOT WORKING
 
-Start fresh. Sometimes global modules can goof you up. This will remove them all.
+Start fresh. Sometimes global modules can goof you up. This will remove them all:
 
 ```
 npm remove --global eslint-config-wesbos babel-eslint eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
