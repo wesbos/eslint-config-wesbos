@@ -161,12 +161,12 @@ module.exports = {
           "var"
         ]
       }
-    ]
+    ],
+    "no-plusplus": 0,
   },
   "plugins": [
     "html",
     "prettier",
     "react-hooks"
   ],
-  "no-plusplus": 0,
 }
