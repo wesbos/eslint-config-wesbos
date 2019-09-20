@@ -167,5 +167,6 @@ module.exports = {
     "html",
     "prettier",
     "react-hooks"
-  ]
+  ],
+  "no-plusplus": 0,
 }
