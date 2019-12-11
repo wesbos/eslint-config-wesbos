@@ -23,10 +23,10 @@ I also install globally so that any project or rogue JS file I write will have l
 ## Local / Per project install
 
 ```sh
-yarn init -y                                     # Create 'package.json' if you haven't already
-npx install-peerdeps --dev eslint-config-sarpik  # Install everything needed by the config
-                                                 # You can see in your package.json there's now a big list of devDependencies
-touch .eslintrc.js                               # Create the config file @ the project's root
+yarn init -y                                            # Create 'package.json' if you haven't already
+npx install-peerdeps --dev eslint-config-sarpik --yarn  # Install everything needed by the config
+                                                        # You can see in your package.json there's now a big list of devDependencies
+touch .eslintrc.js                                      # Create the config file @ the project's root
 ```
 
 Your `.eslintrc.js` file should look like this:
@@ -57,7 +57,7 @@ Now you can manually lint your code by running `yarn lint` (`npm run lint`) and 
 1. First install everything needed:
 
 ```
-npx install-peerdeps --global eslint-config-sarpik
+npx install-peerdeps --global eslint-config-sarpik --yarn
 ```
 
 (**note:** npx is not a spelling mistake of **npm**. `npx` comes with when `node` and `npm` are installed and makes script running easier 😃 (and it works automatically with yarn, too!))
@@ -171,7 +171,7 @@ See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslin
 ## With Create React App
 
 1. (meh) You gotta eject first - `yarn eject` (`npm run eject`)
-1. Run `npx install-peerdeps --dev eslint-config-sarpik`
+1. Run `npx install-peerdeps --dev eslint-config-sarpik --yarn`
 1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "sarpik"`
 
 ## 🤬🤬🤬🤬 IT'S NOT WORKING
