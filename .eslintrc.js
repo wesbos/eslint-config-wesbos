@@ -39,6 +39,11 @@ module.exports = {
     "jest": true
   },
   "rules": {
+	/** typescript-specific */
+	"@typescript-eslint/no-inferrable-types": 0,
+
+	/** end typescript-specific */
+
     "no-debugger": 0,
     "no-alert": 0,
     "no-await-in-loop": 0,
@@ -158,7 +163,7 @@ module.exports = {
       }
     ],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+	"react-hooks/exhaustive-deps": "warn",
     },
   "plugins": [
     "html",
