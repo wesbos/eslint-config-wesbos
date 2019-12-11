@@ -115,28 +115,58 @@ Once you have done one, or both, of the above installs. You probably want your e
 
 2. Now we need to setup some VS Code settings via `Code/File` → `Preferences` → `Settings`. It's easier to enter these settings while editing the `settings.json` file, so click the `{}` icon in the top right corner:
 
-```js
-"editor.formatOnSave": true,
+```json
+{
+  "editor.formatOnSave": true,
 
-/** tell the eslint plugin to run on save */
-"eslint.autoFixOnSave": true,
+  /** tell the eslint plugin to run on save */
+  "eslint.autoFixOnSave": true,
+  "eslint.enable": true,
 
-/** turn it off for JS and JSX - we do this via eslint */
-"[javascript]": {
-  "editor.formatOnSave": false
-},
-"[javascriptreact]": {
-  "editor.formatOnSave": false
-},
+  /** turn formatting off for JS, JSX, TS & TSX - we do this via eslint */
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
 
-/**
- * Optional but IMPORTANT:
- * If you have the prettier extension enabled for other languages like CSS and HTML,
- * turn it off for JS since we are doing it through eslint already
-*/
-"prettier.disableLanguages": ["javascript", "javascriptreact"],
+  /**
+   * Optional but IMPORTANT:
+   * If you have the prettier extension enabled for other languages like CSS and HTML,
+   * turn it off for JS since we are doing it through eslint already
+  */
+  "prettier.disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
+  /** make sure both js and ts are validated */
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ]
+}
 ```
+
+See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslint/blob/master/README.md).
 
 ## With Create React App
 
