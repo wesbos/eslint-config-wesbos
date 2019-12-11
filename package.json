@@ -1,47 +1,54 @@
 {
-  "name": "eslint-config-wesbos",
-  "version": "0.0.19",
-  "description": "ESLint and Prettier Config from Wes Bos",
-  "keywords": [
-    "javascript",
-    "ecmascript",
-    "eslint",
-    "lint",
-    "config",
-    "prettier"
-  ],
-  "main": "index.js",
-  "repository": "git@github.com:wesbos/eslint-config-wesbos.git",
-  "author": "Wes bos <wes@wesbos.com>",
-  "license": "MIT",
-  "peerDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-hooks": "^1.4.0",
-    "prettier": "^1.16.4"
-  },
-  "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-hooks": "^1.4.0",
-    "prettier": "^1.16.4"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix"
-  }
+	"name": "eslint-config-sarpik",
+	"version": "0.0.1",
+	"description": "ESLint and Prettier config from Kipras",
+	"main": "index.js",
+	"author": "Kipras Melnikovas <kipras@kipras.org> (https://kipras.org)",
+	"repository": "https://github.com/sarpik/eslint-config-sarpik",
+	"license": "MIT",
+	"scripts": {
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
+	},
+	"peerDependencies": {
+		"@typescript-eslint/eslint-plugin": "^2.11.0",
+		"@typescript-eslint/parser": "^2.11.0",
+		"babel-eslint": "^9.0.0",
+		"eslint": "^6.1.0",
+		"eslint-config-airbnb": "^18.0.0",
+		"eslint-config-prettier": "^4.1.0",
+		"eslint-plugin-html": "^5.0.3",
+		"eslint-plugin-import": "^2.18.0",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.0.1",
+		"eslint-plugin-react": "^7.14.2",
+		"eslint-plugin-react-hooks": "^1.4.0",
+		"prettier": "^1.16.4",
+		"typescript": "^3.7.3"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^2.11.0",
+		"@typescript-eslint/parser": "^2.11.0",
+		"babel-eslint": "^10.0.3",
+		"eslint": "^6.1.0",
+		"eslint-config-airbnb": "^18.0.0",
+		"eslint-config-prettier": "^6.7.0",
+		"eslint-plugin-html": "^6.0.0",
+		"eslint-plugin-import": "^2.18.0",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.0.1",
+		"eslint-plugin-react": "^7.14.2",
+		"eslint-plugin-react-hooks": "^2.3.0",
+		"prettier": "^1.16.4",
+		"typescript": "^3.7.3"
+	},
+	"keywords": [
+		"javascript",
+		"ecmascript",
+		"eslint",
+		"lint",
+		"config",
+		"prettier",
+		"sarpik"
+	]
 }
