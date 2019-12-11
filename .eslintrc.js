@@ -1,10 +1,25 @@
+#!/usr/bin/env node
+// .eslintrc.js
+
+/**
+ * The ESLint + Prettier config from Kipras <kipras@kipras.org> (https://kipras.org)
+ *
+ * Supports TypeScript!
+ * (
+ *   https://javascriptplayground.com/typescript-eslint/
+ * & https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project
+ * )
+ *
+ */
+
 module.exports = {
   "extends": [
     "airbnb",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "parser": "babel-eslint",
+  parser: "@typescript-eslint/parser" /** leggo typescript! */,
   "parserOptions": {
     "ecmaVersion": 2020,
     // Can I remove these now?
@@ -103,21 +118,30 @@ module.exports = {
           "error"
         ]
       }
-    ],
+	],
     "quotes": [
       2,
-      "single",
+      "double",
       {
         "avoidEscape": true,
         "allowTemplateLiterals": true
       }
-    ],
+	],
+	semi: [2, "always"],
     "prettier/prettier": [
       "error",
       {
         "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 80,
+		"singleQuote": false,
+        "printWidth": 120,
+        tabWidth: 4,
+        useTabs: true,
+        arrowParens: "always",
+        breakBeforeElse: true,
+        disableLanguages: [],
+        flattenTernaries: true,
+        proseWrap: "never",
+        htmlWhitespaceSensitivity: "ignore",
       }
     ],
     "jsx-a11y/href-no-hash": "off",
@@ -131,10 +155,11 @@ module.exports = {
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
-  },
+    },
   "plugins": [
     "html",
     "prettier",
-    "react-hooks"
-  ]
+    "react-hooks",
+    "@typescript-eslint"
+  ],
 }
