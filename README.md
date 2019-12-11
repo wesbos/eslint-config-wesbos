@@ -71,7 +71,7 @@ ESLint will look for one in your home directory
 
 Your `.eslintrc.js` file should look like this:
 
-```json
+```js
 module.exports = {
   "extends": [
     "sarpik"
