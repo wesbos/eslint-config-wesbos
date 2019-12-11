@@ -161,6 +161,7 @@ module.exports = {
     "html",
     "prettier",
     "react-hooks",
-    "@typescript-eslint"
+    // "@typescript-eslint"
+    "@typescript-eslint/eslint-plugin"
   ],
 }
