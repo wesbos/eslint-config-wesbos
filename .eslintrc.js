@@ -18,7 +18,8 @@ module.exports = {
 	"eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
 	"plugin:@typescript-eslint/recommended",
-    // "plugin:@typescript-eslint/recommended-requiring-type-checking", /** broken atm */
+	// "plugin:@typescript-eslint/recommended-requiring-type-checking", /** broken atm */
+    "plugin:monorepo/recommended",
     "prettier",
     "prettier/react",
     "prettier/@typescript-eslint",
