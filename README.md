@@ -1,4 +1,4 @@
-# No-Sweat™ ESLint and Prettier setup
+# No-Sweat™ ESLint, Prettier and TypeScript setup
 
 These are my settings for ESLint and Prettier
 
@@ -83,7 +83,7 @@ module.exports = {
 
 ## Settings
 
-If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc[.js]` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`. Note that prettier rules overwrite anything in my config (trailing comma, and single quote), so you'll need to include those as well. 
+If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc[.js]` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`. Note that prettier rules overwrite anything in my config (trailing comma, and single quote), so you'll need to include those as well.
 
 ```js
 module.exports = {
