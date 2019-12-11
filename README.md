@@ -179,7 +179,7 @@ See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslin
 Start fresh. Sometimes global modules can goof you up. This will remove them all:
 
 ```
-yarn remove --global eslint-config-sarpik @typescript-eslint/parser @typescript-eslint/eslint-plugin typescript eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
+yarn global remove eslint-config-sarpik @typescript-eslint/parser @typescript-eslint/eslint-plugin typescript eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
 ```
 
 To do the above for local, omit the `--global` flag.
