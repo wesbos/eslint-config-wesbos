@@ -16,6 +16,7 @@ module.exports = {
   "extends": [
 	"airbnb",
 	"eslint:recommended",
+	"plugin:import/typescript", /** https://github.com/benmosher/eslint-plugin-import#typescript */
     "plugin:@typescript-eslint/eslint-recommended",
 	"plugin:@typescript-eslint/recommended",
 	// "plugin:@typescript-eslint/recommended-requiring-type-checking", /** broken atm */
@@ -89,7 +90,7 @@ module.exports = {
     ],
     "no-console": 0,
     "import/prefer-default-export": 0,
-    "import": 0,
+	"import": 0,
     "func-names": 0,
     "space-before-function-paren": 0,
     "comma-dangle": 0,
