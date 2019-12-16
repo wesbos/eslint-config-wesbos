@@ -125,6 +125,9 @@ Once you have done one, or both, of the above installs. You probably want your e
     // "source.fixAll.eslint": true /** included by previous setting */
   },
 
+  // "eslint.run": "onSave",
+  "eslint.run": "onType",
+  
   /** turn formatting off for JS, JSX, TS & TSX - we do this via eslint */
   "[javascript]": {
     "editor.formatOnSave": false
