@@ -119,9 +119,11 @@ Once you have done one, or both, of the above installs. You probably want your e
 {
   "editor.formatOnSave": true,
 
-  /** tell the eslint plugin to run on save */
-  "eslint.autoFixOnSave": true,
   "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    // "source.fixAll.eslint": true /** included by previous setting */
+  },
 
   /** turn formatting off for JS, JSX, TS & TSX - we do this via eslint */
   "[javascript]": {
