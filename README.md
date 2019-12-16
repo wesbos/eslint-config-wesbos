@@ -127,19 +127,25 @@ Once you have done one, or both, of the above installs. You probably want your e
 
   // "eslint.run": "onSave",
   "eslint.run": "onType",
-  
-  /** turn formatting off for JS, JSX, TS & TSX - we do this via eslint */
+  /** work as a formatter, too! */
+  "eslint.format.enable": true,
+
+  /**
+   * ~~turn formatting off for JS, JSX, TS & TSX - we do this via eslint~~
+   * ESLint IS the formatter now!
+   * (Prettier is still in the picture, as we have configured it via eslint)
+  */
   "[javascript]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescriptreact]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
 
   /**
