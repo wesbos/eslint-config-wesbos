@@ -144,25 +144,13 @@ Once you have done one, or both, of the above installs. You probably want your e
   */
   "prettier.disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
-  /** make sure both js and ts are validated */
-  "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
-  ]
+  /** ~~make sure both js and ts are validated~~ no longer needed as of vscode-eslint 2.0 */
+//   "eslint.validate": [
+//     "javascript",
+//     "javascriptreact",
+//     "typescript",
+//     "typescriptreact",
+//   ]
 }
 ```
 
