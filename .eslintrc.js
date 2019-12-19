@@ -16,6 +16,7 @@ module.exports = {
   "extends": [
 	"airbnb",
 	"eslint:recommended",
+	"plugin:flowtype/recommended",
 	"plugin:import/typescript", /** https://github.com/benmosher/eslint-plugin-import#typescript */
     "plugin:@typescript-eslint/eslint-recommended",
 	"plugin:@typescript-eslint/recommended",
@@ -171,6 +172,7 @@ module.exports = {
     "html",
     "prettier",
     "react-hooks",
+    "flowtype", /** CRA has this & I wanted it to work by default via global install */
     // "@typescript-eslint"
     "@typescript-eslint/eslint-plugin"
   ],
