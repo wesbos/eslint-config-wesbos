@@ -119,6 +119,9 @@ Once you have done one, or both, of the above installs. You probably want your e
 {
   "editor.formatOnSave": true,
 
+  /** disable tslint - no need! */
+  "tslint.enable": false,
+
   "eslint.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
