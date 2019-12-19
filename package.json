@@ -6,6 +6,7 @@
 	"author": "Kipras Melnikovas <kipras@kipras.org> (https://kipras.org)",
 	"repository": "https://github.com/sarpik/eslint-config-sarpik",
 	"license": "MIT",
+	"private": false,
 	"scripts": {
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
