@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-sarpik",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "ESLint, Prettier and TypeScript setup from Kipras",
 	"main": "index.js",
 	"author": "Kipras Melnikovas <kipras@kipras.org> (https://kipras.org)",
@@ -10,6 +10,7 @@
 	"scripts": {
 		"lint": "    eslint . --ignore-pattern '!.eslintrc.js'",
 		"lint:fix": "eslint . --ignore-pattern '!.eslintrc.js' --fix",
+		"prepublishOnly": "yarn lint",
 		"postpublish": "npx install-peerdeps --global --yarn eslint-config-sarpik@latest"
 	},
 	"peerDependencies": {
