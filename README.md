@@ -119,22 +119,36 @@ Once you have done one, or both, of the above installs. You probably want your e
 {
   "editor.formatOnSave": true,
 
-  /** tell the eslint plugin to run on save */
-  "eslint.autoFixOnSave": true,
-  "eslint.enable": true,
+  /** disable tslint - no need! */
+  "tslint.enable": false,
 
-  /** turn formatting off for JS, JSX, TS & TSX - we do this via eslint */
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    // "source.fixAll.eslint": true /** included by previous setting */
+  },
+
+  // "eslint.run": "onSave",
+  "eslint.run": "onType",
+  /** work as a formatter, too! */
+  "eslint.format.enable": true,
+
+  /**
+   * ~~turn formatting off for JS, JSX, TS & TSX - we do this via eslint~~
+   * ESLint IS the formatter now!
+   * (Prettier is still in the picture, as we have configured it via eslint)
+  */
   "[javascript]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescriptreact]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
 
   /**
@@ -144,25 +158,13 @@ Once you have done one, or both, of the above installs. You probably want your e
   */
   "prettier.disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
-  /** make sure both js and ts are validated */
-  "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
-  ]
+  /** ~~make sure both js and ts are validated~~ no longer needed as of vscode-eslint 2.0 */
+//   "eslint.validate": [
+//     "javascript",
+//     "javascriptreact",
+//     "typescript",
+//     "typescriptreact",
+//   ]
 }
 ```
 
