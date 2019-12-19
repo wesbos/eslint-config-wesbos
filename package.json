@@ -10,7 +10,7 @@
 	"scripts": {
 		"lint": "    eslint . --ignore-pattern '!.eslintrc.js'",
 		"lint:fix": "eslint . --ignore-pattern '!.eslintrc.js' --fix",
-		"prepublishOnly": "yarn lint",
+		"prepublishOnly": "yarn lint:fix",
 		"postpublish": "npx install-peerdeps --global --yarn eslint-config-sarpik@latest"
 	},
 	"peerDependencies": {
