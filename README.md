@@ -178,6 +178,38 @@ See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslin
    2.  replace `"eslint": "5.x" with `"eslint": "6.x"`
    3.  update `lint` and `lint:fix` scripts - append the `--ext js,jsx,ts,tsx` option  (required for eslint `6.x`, see https://github.com/sarpik/eslint-config-sarpik/issues/4)
 
+Your `package.json` should end up like this:
+
+```json
+{
+	"scripts": {
+		"lint": "    eslint . --ext js,jsx,ts,tsx",
+		"lint:fix": "eslint . --ext js,jsx,ts,tsx"
+	},
+	"eslintConfig": {
+		"extends": "sarpik"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "<version>",
+		"@typescript-eslint/parser": "<version>",
+		"babel-eslint": "<version>",
+		"eslint": "6.x",
+		"eslint-config-airbnb": "<version>",
+		"eslint-config-prettier": "<version>",
+		"eslint-config-sarpik": "<version>",
+		"eslint-plugin-flowtype": "<version>",
+		"eslint-plugin-html": "<version>",
+		"eslint-plugin-import": "<version>",
+		"eslint-plugin-jsx-a11y": "<version>",
+		"eslint-plugin-monorepo": "<version>",
+		"eslint-plugin-prettier": "<version>",
+		"eslint-plugin-react": "<version>",
+		"eslint-plugin-react-hooks": "<version>",
+		"prettier": "<version>"
+	}
+}
+```
+
 ## 🤬🤬🤬🤬 IT'S NOT WORKING
 
 Start fresh. Sometimes global modules can goof you up. This will remove them all:
