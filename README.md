@@ -176,6 +176,7 @@ See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslin
 1. Crack open your `package.json` and
    1.  replace `"extends": "react-app"` with `"extends": "sarpik"`
    2.  replace `"eslint": "5.x" with `"eslint": "6.x"`
+   3.  update `lint` and `lint:fix` scripts - append the `--ext js,jsx,ts,tsx` option  (required for eslint `6.x`, see https://github.com/sarpik/eslint-config-sarpik/issues/4)
 
 ## 🤬🤬🤬🤬 IT'S NOT WORKING
 
