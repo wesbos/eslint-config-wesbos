@@ -8,8 +8,8 @@
 	"license": "MIT",
 	"private": false,
 	"scripts": {
-		"lint": "    eslint . --ignore-pattern '!.eslintrc.js'",
-		"lint:fix": "eslint . --ignore-pattern '!.eslintrc.js' --fix",
+		"lint": "    eslint . --ext js,jsx,ts,tsx --ignore-pattern '!.eslintrc.js'",
+		"lint:fix": "eslint . --ext js,jsx,ts,tsx --ignore-pattern '!.eslintrc.js' --fix",
 		"prepublishOnly": "yarn lint:fix",
 		"postpublish": "npx install-peerdeps --global --yarn eslint-config-sarpik@latest"
 	},
