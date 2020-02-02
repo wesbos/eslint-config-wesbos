@@ -20,6 +20,10 @@ It's usually best to install this locally once per project, that way you can hav
 
 I also install globally so that any project or rogue JS file I write will have linting and formatting applied without having to go through the setup. You might disagree and that is okay, just don't do it then 😃.
 
+## Staying up-to-date
+
+You can [watch the repo (releases only) on github](https://github.com/sarpik/eslint-config-sarpik/watchers) to get notified once I release a new version! 🚀
+
 ## Local / Per project install
 
 ```sh
