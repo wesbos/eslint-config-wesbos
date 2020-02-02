@@ -173,7 +173,8 @@ See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslin
 ## With Create React App
 
 1. Run `npx install-peerdeps --dev eslint-config-sarpik --yarn`
-1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "sarpik"`
+1. Crack open your `package.json` and
+   1.  replace `"extends": "react-app"` with `"extends": "sarpik"`
 
 ## 🤬🤬🤬🤬 IT'S NOT WORKING
 
