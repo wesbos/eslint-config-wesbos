@@ -183,7 +183,7 @@ See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslin
 		1. verify that eslint's version is `6.x.y`: run `node node_modules/.bin/eslint --version`
    1. if you're using typescript, append `--ext js,jsx,ts,tsx` every time you call `eslint` (required for eslint `6.x`, see https://github.com/sarpik/eslint-config-sarpik/issues/4)
 
-Your `package.json` should end up like this:
+Your `package.json` should have this:
 
 ```json
 {
