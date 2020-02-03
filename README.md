@@ -176,7 +176,7 @@ See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslin
 
 ## With Create React App
 
-1. Run `npx install-peerdeps --dev eslint-config-sarpik --yarn`
+1. Run `npx install-peerdeps eslint-config-sarpik --dev --yarn`
 1. Crack open your `package.json` and
    1.  replace `"extends": "react-app"` with `"extends": "sarpik"`
    2.  replace `"eslint": "5.x"` with `"eslint": "6.x"`
