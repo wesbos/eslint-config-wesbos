@@ -200,6 +200,8 @@ Your `package.json` should have this:
 }
 ```
 
+Example repo with commits as setting up steps: https://github.com/sarpik/cra-eslint-ts
+
 ## 🤬🤬🤬🤬 IT'S NOT WORKING
 
 Start fresh. Sometimes global modules can goof you up. This will remove them all:
