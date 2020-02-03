@@ -188,7 +188,7 @@ Your `package.json` should end up like this:
 {
 	"scripts": {
 		"lint": "    eslint . --ext js,jsx,ts,tsx",
-		"lint:fix": "eslint . --ext js,jsx,ts,tsx"
+		"lint:fix": "eslint . --ext js,jsx,ts,tsx --fix"
 	},
 	"eslintConfig": {
 		"extends": "sarpik"
