@@ -195,22 +195,7 @@ Your `package.json` should have this:
 		"extends": "sarpik"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "<version>",
-		"@typescript-eslint/parser": "<version>",
-		"babel-eslint": "<version>",
-		"eslint": "6.x",
-		"eslint-config-airbnb": "<version>",
-		"eslint-config-prettier": "<version>",
-		"eslint-config-sarpik": "<version>",
-		"eslint-plugin-flowtype": "<version>",
-		"eslint-plugin-html": "<version>",
-		"eslint-plugin-import": "<version>",
-		"eslint-plugin-jsx-a11y": "<version>",
-		"eslint-plugin-monorepo": "<version>",
-		"eslint-plugin-prettier": "<version>",
-		"eslint-plugin-react": "<version>",
-		"eslint-plugin-react-hooks": "<version>",
-		"prettier": "<version>"
+		"eslint": "6.x"
 	}
 }
 ```
