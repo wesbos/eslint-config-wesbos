@@ -135,6 +135,19 @@ module.exports = {
 				htmlWhitespaceSensitivity: "ignore",
 			},
 		],
+		/** https://eslint.org/docs/rules/spaced-comment */
+		"spaced-comment": [
+			"error",
+			"always",
+			{
+				line: { markers: ["*package", "!", "/", ",", "="] },
+				block: {
+					balanced: true,
+					markers: ["*package", "!", ",", ":", "::", "flow-include"],
+					exceptions: ["*"],
+				},
+			},
+		],
 		"jsx-a11y/href-no-hash": "off",
 		"jsx-a11y/anchor-is-valid": [
 			"warn",
