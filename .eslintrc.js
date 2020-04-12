@@ -54,9 +54,19 @@ module.exports = {
 		/** end flow-specific */
 
 		indent: ["error", "tab"] /** git good m8 */,
+
+		/** disable meh stuff */
+
 		"no-debugger": 0,
 		"no-alert": 0,
 		"no-await-in-loop": 0,
+		"no-plusplus": 0,
+		"no-continue": 0,
+		"eslint-disable max-classes-per-file": 0,
+		"eslint-disable lines-between-class-members": 0,
+
+		/** end disable meh stuff */
+
 		"no-return-assign": ["error", "except-parens"],
 		"no-restricted-syntax": [2, "ForInStatement", "LabeledStatement", "WithStatement"],
 		"no-unused-vars": [
