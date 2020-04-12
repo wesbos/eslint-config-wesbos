@@ -11,7 +11,10 @@
 		"lint": "    eslint . --ext js,jsx,ts,tsx --ignore-pattern '!.eslintrc.js'",
 		"lint:fix": "eslint . --ext js,jsx,ts,tsx --ignore-pattern '!.eslintrc.js' --fix",
 		"prepublishOnly": "yarn lint:fix",
-		"postpublish": "npx install-peerdeps --global --yarn eslint-config-sarpik@latest"
+		"postpublish": "   yarn updateGlobal",
+		"printDeps": "node -p -e \"Object.keys(require('./package.json').peerDependencies).reduce((peerDep, accumulator) => accumulator + ' ' + peerDep, '')\"",
+		"update": "      yarn        add $(yarn -s printDeps)",
+		"updateGlobal": "yarn global add $(yarn -s printDeps)"
 	},
 	"peerDependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.11.0",
