@@ -44,6 +44,7 @@ module.exports = {
 	rules: {
 		/** typescript-specific */
 		"@typescript-eslint/no-inferrable-types": 0,
+		"@typescript-eslint/no-use-before-define": 0 /** allow `const foo = require("bar");` in typescript */,
 
 		/** end typescript-specific */
 
