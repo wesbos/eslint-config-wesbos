@@ -48,6 +48,11 @@ module.exports = {
 
 		/** end typescript-specific */
 
+		/** flow-specific */
+		"flowtype/no-types-missing-file-annotation": 0,
+
+		/** end flow-specific */
+
 		"no-debugger": 0,
 		"no-alert": 0,
 		"no-await-in-loop": 0,
