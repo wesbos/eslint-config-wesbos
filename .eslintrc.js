@@ -53,6 +53,7 @@ module.exports = {
 
 		/** end flow-specific */
 
+		indent: ["error", "tab"] /** git good m8 */,
 		"no-debugger": 0,
 		"no-alert": 0,
 		"no-await-in-loop": 0,
@@ -171,5 +172,14 @@ module.exports = {
 		"flowtype" /** CRA has this & I wanted it to work by default via global install */,
 		// "@typescript-eslint"
 		"@typescript-eslint/eslint-plugin",
+	],
+	overrides: [
+		/** properly handle `yaml` (must) and optionally `md` files */
+		{
+			files: ["*.yaml", ".yml", "*.md"],
+			rules: {
+				indent: ["error", 2],
+			},
+		},
 	],
 };
