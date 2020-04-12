@@ -174,6 +174,12 @@ module.exports = {
 		"@typescript-eslint/eslint-plugin",
 	],
 	overrides: [
+		/** set parser to js for js files */
+		{
+			files: ["*.[mj]sx?"],
+			parser: "esprima" /** leggo typescript! */,
+		},
+
 		/** properly handle `yaml` (must) and optionally `md` files */
 		{
 			files: ["*.yaml", ".yml", "*.md"],
