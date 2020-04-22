@@ -117,6 +117,10 @@ Once you have done one, or both, of the above installs. You probably want your e
   ```js
     // These are all my auto-save configs
   "editor.formatOnSave": true,
+  
+  // This setting is super important to make it autosave on vscode
+  "eslint.autoFixOnSave": true,
+
   // turn it off for JS and JSX, we will do this via eslint
   "[javascript]": {
     "editor.formatOnSave": false
