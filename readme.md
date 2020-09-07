@@ -115,7 +115,7 @@ Once you have done one, or both, of the above installs. You probably want your e
 1. Install the [ESLint package](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 2. Now we need to setup some VS Code settings via `Code/File` → `Preferences` → `Settings`. It's easier to enter these settings while editing the `settings.json` file, so click the `{}` icon in the top right corner:
   ```js
-    // These are all my auto-save configs
+  // These are all my auto-save configs
   "editor.formatOnSave": true,
   // turn it off for JS and JSX, we will do this via eslint
   "[javascript]": {
@@ -124,6 +124,8 @@ Once you have done one, or both, of the above installs. You probably want your e
   "[javascriptreact]": {
     "editor.formatOnSave": false
   },
+  // show eslint icon at bottom toolbar
+  "eslint.alwaysShowStatus": true,
   // tell the ESLint plugin to run on save
   "editor.codeActionsOnSave": {
     "source.fixAll": true
