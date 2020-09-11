@@ -163,7 +163,7 @@ Needs some instructions [from here](https://github.com/wesbos/eslint-config-wesb
 
 ## With Yarn
 
-It should just work, but if they aren't showing up in your package.json, try `npx install-peerdeps -Y`
+It should just work, but if they aren't showing up in your package.json, try `npx install-peerdeps --dev eslint-config-wesbos -Y`
 
 ## 🤬🤬🤬🤬 IT'S NOT WORKING
 
