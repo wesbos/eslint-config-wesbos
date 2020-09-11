@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wesbos",
-  "version": "0.0.23",
+  "version": "1.0.0",
   "description": "ESLint and Prettier Config from Wes Bos",
   "keywords": [
     "javascript",
@@ -15,30 +15,30 @@
   "author": "Wes bos <wes@wesbos.com>",
   "license": "MIT",
   "peerDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-html": "^6.0.3",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.0.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^1.4.0",
-    "prettier": "^1.16.4"
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.1"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-html": "^6.0.3",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.0.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^1.4.0",
-    "prettier": "^1.16.4"
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.1"
   },
   "scripts": {
     "lint": "eslint .",

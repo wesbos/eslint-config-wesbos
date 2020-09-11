@@ -56,6 +56,8 @@ Tip: You can alternatively put this object in your `package.json` under the prop
 
 ## Global Install
 
+> Note: Global Install may not be working as it's been removed in ESLint 7.x. Investigating now...
+
 1. First install everything needed:
 
 ```
@@ -84,7 +86,7 @@ In your `.eslintrc` file, it should look like this:
 
 ## Settings
 
-If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`. Note that prettier rules overwrite anything in my config (trailing comma, and single quote), so you'll need to include those as well. 
+If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`. Note that prettier rules overwrite anything in my config (trailing comma, and single quote), so you'll need to include those as well.
 
 ```js
 {
@@ -134,12 +136,34 @@ Once you have done one, or both, of the above installs. You probably want your e
   "prettier.disableLanguages": ["javascript", "javascriptreact"],
   ```
 
+Finally you'll usually need to restart VS code. They say you don't need to, but it's never worked for me until I restart.
+
 ## With Create React App
 
-1. You gotta eject first `npm run eject` or `yarn eject`
 1. Run `npx install-peerdeps --dev eslint-config-wesbos`
 1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "wesbos"`
 
+## With Gatsby
+
+1. Run `npx install-peerdeps --dev eslint-config-wesbos`
+1. If you have an existing `.prettierrc` file, delete it.
+1. follow the `Local / Per Project Install` steps above
+
+## With WSL
+
+Can someone add this?
+
+## With Intellij Products
+
+Can someone who uses intellij write some good instructions from [these steps](https://github.com/wesbos/eslint-config-wesbos/issues/43#issuecomment-652554103)
+
+## With Typescript
+
+Needs some instructions [from here](https://github.com/wesbos/eslint-config-wesbos/issues/33)
+
+## With Yarn
+
+It should just work, but if they aren't showing up in your package.json, try `npx install-peerdeps -Y`
 
 ## 🤬🤬🤬🤬 IT'S NOT WORKING
 
