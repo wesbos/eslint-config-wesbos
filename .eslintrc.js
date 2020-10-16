@@ -73,7 +73,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       1,
       {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
       },
     ],
     radix: 0,
@@ -98,9 +98,9 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         printWidth: 80,
-        //below line only for window users facing CLRF and eslint/prettier error
+        // below line only for window users facing CLRF and eslint/prettier error
         // non window users feel free to delete it
-        endOfLine: 'auto'
+        endOfLine: 'auto',
       },
     ],
     'jsx-a11y/href-no-hash': 'off',
