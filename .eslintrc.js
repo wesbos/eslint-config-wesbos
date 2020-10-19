@@ -69,6 +69,12 @@ module.exports = {
     'react/forbid-prop-types': 0,
     'react/no-unescaped-entities': 0,
     'jsx-a11y/accessible-emoji': 0,
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "assert": "either"
+      }
+    ],
     'react/require-default-props': 0,
     'react/jsx-filename-extension': [
       1,
