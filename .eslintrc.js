@@ -69,11 +69,11 @@ module.exports = {
     'react/forbid-prop-types': 0,
     'react/no-unescaped-entities': 0,
     'jsx-a11y/accessible-emoji': 0,
-    "jsx-a11y/label-has-associated-control": [
-      "error",
+    'jsx-a11y/label-has-associated-control': [
+      'error',
       {
-        "assert": "either"
-      }
+        assert: 'either',
+      },
     ],
     'react/require-default-props': 0,
     'react/jsx-filename-extension': [
@@ -82,6 +82,7 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
     ],
+    'react/jsx-props-no-spreading': 0,
     radix: 0,
     'no-shadow': [
       2,
