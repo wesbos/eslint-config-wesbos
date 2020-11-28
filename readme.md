@@ -136,6 +136,8 @@ Once you have done one, or both, of the above installs. You probably want your e
   "prettier.disableLanguages": ["javascript", "javascriptreact"],
   ```
 
+After attempting to lint your file for the first time, you may need to click on 'ESLint' in the bottom right and select 'Allow Everywhere' in the alert window. 
+
 Finally you'll usually need to restart VS code. They say you don't need to, but it's never worked for me until I restart.
 
 ## With Create React App
