@@ -5,7 +5,7 @@ module.exports = {
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    // First we take all the JS rules
+    // Layer in all the JS Rules
     './.eslintrc.js',
   ],
   // then add some extra good stuff for Typescript
