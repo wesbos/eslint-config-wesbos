@@ -11,7 +11,16 @@ module.exports = {
   // then add some extra good stuff for Typescript
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
-  rules: {},
+  // Then we add our own custom typescript rules
+  rules: {
+    // This allows us to use async function on addEventListener(). Discussion: https://twitter.com/wesbos/status/1337074242161172486
+    '@typescript-eslint/no-misused-promises': [
+      'error',
+      {
+        checksVoidReturn: true,
+      },
+    ],
+  },
   parserOptions: {
     project: './tsconfig.json',
   },
