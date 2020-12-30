@@ -155,9 +155,33 @@ Finally you'll usually need to restart VS code. They say you don't need to, but 
 
 Can someone add this?
 
-## With Intellij Products
+## With JetBrains Products (IntelliJ IDEA, WebStorm, RubyMine, PyCharm, PhpStorm, etc)
 
-Can someone who uses intellij write some good instructions from [these steps](https://github.com/wesbos/eslint-config-wesbos/issues/43#issuecomment-652554103)
+If you have previously configured ESLint to run via a File Watcher, [turn that off.](https://www.jetbrains.com/help/idea/using-file-watchers.html#enableFileWatcher)
+
+### If you choose Local / Per Project Install Above
+1. Open ESLint configuration by going to File > Settings (Edit > Preferences on Mac) > Languages & Frameworks > Code Quality Tools > ESLint (optionally just search settings for "eslint")
+1. Select **Automatic ESLint Configuration**
+1. Check **Run eslint --fix on save**
+
+### If you choose Global Install
+
+The following steps are for a typical Node / ESLint global installtion.  If you have a customized setup, refer to JetBrains docs for more [ESLint Configuration Options](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_eslint_manual_configuration).
+
+1. Open ESLint configuration by going to File > Settings (Edit > Preferences on Mac) > Languages & Frameworks > Code Quality Tools > ESLint (optionally just search settings for "eslint")
+1. Select **Manual ESLint configuration**
+1. Choose your **Node interpreter** from the detected installations
+1. Select the global **ESLint package** from the dropdown
+1. Leave Configuration File as **Automatic Search**
+1. Check **Run eslint --fix on save**
+
+### Ensure the Prettier plugin is disabled if installed.
+
+1. Open Prettier configuration by going to File > Settings (Edit > Preferences on Mac) > Languages & Frameworks > Code Quality Tools > Prettier (optionally just search settings for "prettier")
+1. Uncheck both **On code reformat** and **On save**
+1. *Optional BUT IMPORTANT:* If you have the Prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already.
+    1. Make sure the **Run for files** glob does not include `js,ts,jsx,tsx`.
+    2. An example glob for styles, config, and markdown. `{**/*,*}.{yml,css,sass,md}`
 
 ## With Typescript
 
