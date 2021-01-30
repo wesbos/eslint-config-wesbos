@@ -33,13 +33,6 @@ module.exports = {
       "LabeledStatement",
       "WithStatement"
     ],
-    "no-unused-vars": [
-      1,
-      {
-        "ignoreSiblings": true,
-        "argsIgnorePattern": "res|next|^err|event|context|callback"
-      }
-    ],
     "prefer-const": [
       "error",
       {
@@ -166,7 +159,7 @@ module.exports = {
     "no-unused-vars": [
       1,
       {
-        "ignoreSiblings": true,
+        "ignoreRestSiblings": true,
         "argsIgnorePattern": "res|next|^err|event|context|callback|^_",
         "varsIgnorePattern": "^_"
       }
