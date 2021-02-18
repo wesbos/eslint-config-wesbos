@@ -12,7 +12,7 @@
 		"lint:fix": "eslint . --ext js,jsx,ts,tsx --ignore-pattern '!.eslintrc.js' --fix",
 		"prepublishOnly": "yarn lint:fix",
 		"postpublish": "   yarn updateGlobal",
-		"printDeps": "node -p -e \"Object.keys(require('./package.json').peerDependencies).reduce((peerDep, accumulator) => accumulator + ' ' + peerDep, '')\"",
+		"printDeps": "node -p -e \"Object.entries(require('./package.json').peerDependencies).reduce((accumulator, [key, value]) => accumulator + ' ' + key + '@' + value, '')\"",
 		"update": "      yarn        add $(yarn -s printDeps)",
 		"updateGlobal": "yarn global add $(yarn -s printDeps)"
 	},
