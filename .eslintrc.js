@@ -116,6 +116,7 @@ module.exports = {
 		"jsx-a11y/accessible-emoji": 0,
 		"react/require-default-props": 0,
 		"react/jsx-props-no-spreading": 0,
+		"react/button-has-type": 1,
 		"react/jsx-filename-extension": [
 			1,
 			{
