@@ -39,7 +39,13 @@ Your `.eslintrc.js` file should look like this:
 module.exports = {
   "extends": [
     "sarpik"
-  ]
+  ],
+  "ignorePatterns": [
+    "node_modules",
+	"dist",
+	"build",
+  ],
+  "rules": {},
 }
 ```
 
@@ -79,7 +85,13 @@ Your `.eslintrc.js` file should look like this:
 module.exports = {
   "extends": [
     "sarpik"
-  ]
+  ],
+  "ignorePatterns": [
+    "node_modules",
+	"dist",
+	"build",
+  ],
+  "rules": {},
 }
 ```
 
@@ -92,7 +104,12 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
 ```js
 module.exports = {
   "extends": [
-    "sarpik"
+    "eslint-config-sarpik",
+  ],
+  "ignorePatterns": [
+    "node_modules",
+	"dist",
+	"build",
   ],
   "rules": {
     "no-console": 2,
@@ -104,8 +121,8 @@ module.exports = {
         "printWidth": 120,
         "tabWidth": 4,
       }
-    ]
-  }
+    ],
+  },
 }
 ```
 
@@ -205,11 +222,30 @@ Your `package.json` should have this:
 		"lint": "    eslint . --ext js,jsx,ts,tsx",
 		"lint:fix": "eslint . --ext js,jsx,ts,tsx --fix"
 	},
-	"eslintConfig": {
-		"extends": "eslint-config-sarpik"
-	},
 	"devDependencies": {
 		"eslint": "7.x"
+	},
+	"eslintConfig": {
+		"extends": [
+		  "eslint-config-sarpik"
+		],
+		"ignorePatterns": [
+		  "node_modules",
+		  "dist",
+		  "build"
+		],
+		"rules": {
+		  "no-console": 2,
+		  "prettier/prettier": [
+			"error",
+			{
+			  "trailingComma": "es5",
+			  "singleQuote": false,
+			  "printWidth": 120,
+			  "tabWidth": 4
+			}
+		  ]
+		}
 	}
 }
 ```
