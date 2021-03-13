@@ -176,12 +176,26 @@ See also [the README of vscode-eslint](https://github.com/microsoft/vscode-eslin
 
 ## With Create React App
 
-1. Run `npx install-peerdeps eslint-config-sarpik --dev --yarn`
-1. Crack open your `package.json` and
-   1.  replace `"extends": "react-app"` with `"extends": "sarpik"`
-   1.  replace `"eslint": "5.x"` with `"eslint": "6.x"` like so: `yarn add eslint@6.x`, or replace yourself & run `yarn install`
-		1. verify that eslint's version is `6.x.y`: run `node node_modules/.bin/eslint --version`
-   1. if you're using typescript, append `--ext js,jsx,ts,tsx` every time you call `eslint` (required for eslint `6.x`, see https://github.com/sarpik/eslint-config-sarpik/issues/4)
+Run this:
+
+```sh
+npx install-peerdeps eslint-config-sarpik --dev --yarn
+
+sed 's/"react-app"/"eslint-config-sarpik"/g' package.json -i
+sed 's/"eslint": "5.x"/"eslint": "7.x"/g'    package.json -i
+
+yarn install
+
+# verify
+node node_modules/.bin/eslint --version
+
+# run
+eslint . --fix
+
+# run in typescript project
+eslint . --ext js,jsx,ts,tsx --fix
+
+```
 
 Your `package.json` should have this:
 
@@ -192,10 +206,10 @@ Your `package.json` should have this:
 		"lint:fix": "eslint . --ext js,jsx,ts,tsx --fix"
 	},
 	"eslintConfig": {
-		"extends": "sarpik"
+		"extends": "eslint-config-sarpik"
 	},
 	"devDependencies": {
-		"eslint": "6.x"
+		"eslint": "7.x"
 	}
 }
 ```
