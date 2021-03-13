@@ -46,6 +46,10 @@ module.exports = {
 		"@typescript-eslint/no-inferrable-types": 0,
 		"@typescript-eslint/no-use-before-define": 0 /** allow `const foo = require("bar");` in typescript */,
 		"@typescript-eslint/consistent-type-assertions": 0 /** allow let a: T = <T>"something of type T" */,
+		"@typescript-eslint/no-empty-function": 1,
+		"@typescript-eslint/ban-types": 1,
+		"@typescript-eslint/ban-ts-comment": 1,
+		"@typescript-eslint/interface-name-prefix": 0 /** it's suggested in the typescript's own codebase, but not in general projects */,
 
 		/** end typescript-specific */
 
@@ -65,6 +69,7 @@ module.exports = {
 		"no-continue": 0,
 		"eslint-disable max-classes-per-file": 0,
 		"eslint-disable lines-between-class-members": 0,
+		"no-nested-ternary": 0,
 
 		/** end disable meh stuff */
 
@@ -91,7 +96,7 @@ module.exports = {
 			},
 		],
 		"no-param-reassign": [
-			2,
+			1,
 			{
 				props: false,
 			},
