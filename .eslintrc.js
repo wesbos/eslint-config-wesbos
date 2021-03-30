@@ -191,6 +191,7 @@ module.exports = {
 		"flowtype" /** CRA has this & I wanted it to work by default via global install */,
 		// "@typescript-eslint"
 		"@typescript-eslint/eslint-plugin",
+		"clean-regex" /** https://github.com/RunDevelopment/eslint-plugin-clean-regex */,
 	],
 	overrides: [
 		/** set parser to js for js files */

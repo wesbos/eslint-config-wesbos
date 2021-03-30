@@ -551,6 +551,14 @@ eslint-module-utils@^2.1.1, eslint-module-utils@^2.4.1:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
+eslint-plugin-clean-regex@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-clean-regex/-/eslint-plugin-clean-regex-0.5.1.tgz#1fc8d61a1df2702d8f267d58ac101f5243e7ef7c"
+  integrity sha512-ZuZxP2V2s2LI2OZPUF5eQQtgUQv1/Z7jDI2DG5GEHGM9D0T0LSbcg8ViuFolrOOmUP7dCz+JHN4gDQWyeDdvJg==
+  dependencies:
+    refa "^0.7.1"
+    regexpp "^3.1.0"
+
 eslint-plugin-eslint-plugin@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-plugin/-/eslint-plugin-eslint-plugin-2.1.0.tgz#a7a00f15a886957d855feacaafee264f039e62d5"
@@ -1443,6 +1451,13 @@ readable-stream@^3.1.1:
     string_decoder "^1.1.1"
     util-deprecate "^1.0.1"
 
+refa@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/refa/-/refa-0.7.1.tgz#ebd1b36a0b6f83b2ec05df406bd8336d64de2e7f"
+  integrity sha512-rvs2Px1z/PS01L8wY06YZZYDg4KzWz2CZjjsUekhyF3gnvUhu9EMfdgKwGmSJYUQItpZEPJjv2uz4vUlOkUiZg==
+  dependencies:
+    regexpp "^3.1.0"
+
 regenerator-runtime@^0.13.2:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
@@ -1457,6 +1472,11 @@ regexpp@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-3.0.0.tgz#dd63982ee3300e67b41c1956f850aa680d9d330e"
   integrity sha512-Z+hNr7RAVWxznLPuA7DIh8UNX1j9CDrUQxskw9IrBE1Dxue2lyXT+shqEIeLUjrokxIP8CMy1WkjgG3rTsd5/g==
+
+regexpp@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-3.1.0.tgz#206d0ad0a5648cffbdb8ae46438f3dc51c9f78e2"
+  integrity sha512-ZOIzd8yVsQQA7j8GCSlPGXwg5PfmA1mrq0JP4nGhh54LaKN3xdai/vHUDu74pKwV8OxseMS65u2NImosQcSD0Q==
 
 resolve-from@^4.0.0:
   version "4.0.0"
