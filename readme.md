@@ -121,10 +121,12 @@ Once you have done one, or both, of the above installs. You probably want your e
   "editor.formatOnSave": true,
   // turn it off for JS and JSX, we will do this via eslint
   "[javascript]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   // show eslint icon at bottom toolbar
   "eslint.alwaysShowStatus": true,
@@ -132,11 +134,9 @@ Once you have done one, or both, of the above installs. You probably want your e
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
-  "prettier.disableLanguages": ["javascript", "javascriptreact"],
   ```
 
-After attempting to lint your file for the first time, you may need to click on 'ESLint' in the bottom right and select 'Allow Everywhere' in the alert window. 
+After attempting to lint your file for the first time, you may need to click on 'ESLint' in the bottom right and select 'Allow Everywhere' in the alert window.
 
 Finally you'll usually need to restart VS code. They say you don't need to, but it's never worked for me until I restart.
 
@@ -204,3 +204,17 @@ To do the above for local, omit the `--global` flag.
 Then if you are using a local install, remove your `package-lock.json` file and delete the `node_modules/` directory.
 
 Then follow the above instructions again.
+
+### Parsing error: No Babel config file detected for filename
+
+You'll need to create a default `babel.config.js` file in the root of your project. See https://github.com/standard/vscode-standard/issues/100#issuecomment-686435590 for more information
+
+To make this work with previous babelrc files you may have you can add a simple `babel.config.js` of:
+
+```js
+module.exports = {
+  babelrcRoots: [
+    "."
+  ]
+};
+```
