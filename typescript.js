@@ -20,6 +20,14 @@ module.exports = {
         checksVoidReturn: false,
       },
     ],
+    '@typescript-eslint/no-explicit-any': 'off',
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': [
+      'warn',
+      {
+        ignoreDeclarationMerge: true,
+      },
+    ],
   },
   parserOptions: {
     project: './tsconfig.json',

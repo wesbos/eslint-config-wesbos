@@ -113,6 +113,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/comma-dangle': ['off'],
+    'react/jsx-props-no-spreading': 'off',
   },
   plugins: ['html', 'prettier', 'react-hooks'],
 };
