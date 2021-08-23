@@ -121,10 +121,10 @@ Once you have done one, or both, of the above installs. You probably want your e
   "editor.formatOnSave": true,
   // turn it off for JS and JSX, we will do this via eslint
   "[javascript]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": false
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": false
   },
   // show eslint icon at bottom toolbar
   "eslint.alwaysShowStatus": true,
