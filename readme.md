@@ -54,36 +54,6 @@ Tip: You can alternatively put this object in your `package.json` under the prop
 
 6. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
 
-## Global Install
-
-> Note: Global Install may not be working as it's been removed in ESLint 7.x. Investigating now...
-
-1. First install everything needed:
-
-```
-npx install-peerdeps --global eslint-config-wesbos
-```
-(**note:** npx is not a spelling mistake of **npm**. `npx` comes with when `node` and `npm` are installed and makes script running easier 😃)
-
-2. Then you need to make a global `.eslintrc` file:
-
-ESLint will look for one in your home directory
-
-* `~/.eslintrc` for mac
-* `C:\Users\username\.eslintrc` for windows
-
-In your `.eslintrc` file, it should look like this:
-
-```json
-{
-  "extends": [
-    "wesbos"
-  ]
-}
-```
-
-3. To use from the CLI, you can now run `eslint .` or configure your editor as we show next.
-
 ## Settings
 
 If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`. Note that prettier rules overwrite anything in my config (trailing comma, and single quote), so you'll need to include those as well.
