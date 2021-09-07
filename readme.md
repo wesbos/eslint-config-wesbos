@@ -131,9 +131,7 @@ Once you have done one, or both, of the above installs. You probably want your e
   // tell the ESLint plugin to run on save
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  },
-  // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
-  "prettier.disableLanguages": ["javascript", "javascriptreact"],
+  }
   ```
 
 Finally you'll usually need to restart VS code. They say you don't need to, but it's never worked for me until I restart.

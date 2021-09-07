@@ -1,9 +1,6 @@
 module.exports = {
   extends: ['airbnb', 'prettier'],
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
+  parser: '@babel/eslint-parser',
   env: {
     browser: true,
     node: true,
