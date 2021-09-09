@@ -35,11 +35,20 @@ npx install-peerdeps --dev eslint-config-wesbos
 
 ```json
 {
-  "extends": [
-    "wesbos"
-  ]
+  "extends": [ "wesbos" ]
 }
 ```
+
+For TypeScript projects, use `wesbos/typescript`.
+
+```json
+{
+  "extends": [ "wesbos/typescript" ]
+}
+```
+
+TypeScript users will also need a `tsconfig.json` file in their project. An empty object (`{}`) will do if this is a new project.
+
 
 Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig":`. This makes one less file in your project.
 
@@ -127,22 +136,8 @@ Can someone who uses intellij write some good instructions from [these steps](ht
 
 ## With Typescript
 
-Needs some instructions [from here](https://github.com/wesbos/eslint-config-wesbos/issues/33)
+Same instructions as above, just make sure you extend `wesbos/typescript` instead of just `wesbos`.
 
 ## With Yarn
 
 It should just work, but if they aren't showing up in your package.json, try `npx install-peerdeps --dev eslint-config-wesbos -Y`
-
-## 🤬🤬🤬🤬 IT'S NOT WORKING
-
-Start fresh. Sometimes global modules can goof you up. This will remove them all:
-
-```
-npm remove --global eslint-config-wesbos babel-eslint eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
-```
-
-To do the above for local, omit the `--global` flag.
-
-Then if you are using a local install, remove your `package-lock.json` file and delete the `node_modules/` directory.
-
-Then follow the above instructions again.
