@@ -67,6 +67,12 @@ module.exports = {
     'react/forbid-prop-types': 0,
     'react/no-unescaped-entities': 0,
     'jsx-a11y/accessible-emoji': 0,
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "assert": "either"
+      }
+    ],
     'react/require-default-props': 0,
     'react/jsx-filename-extension': [
       1,
@@ -96,8 +102,8 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         printWidth: 80,
-        // below line only for window users facing CLRF and eslint/prettier error
-        // non window users feel free to delete it
+        //below line only for windows users facing CLRF and eslint/prettier error
+        // non windows users feel free to delete it
         endOfLine: 'auto',
       },
     ],
