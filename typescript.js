@@ -1,7 +1,7 @@
 module.exports = {
   globals: {
     React: true,
-    JSX: true
+    JSX: true,
   },
   extends: [
     'plugin:@typescript-eslint/recommended', // Uses rules from `@typescript-eslint/eslint-plugin`,
@@ -31,8 +31,9 @@ module.exports = {
         ignoreDeclarationMerge: true,
       },
     ],
+    '@typescript-eslint/no-floating-promises': 'off',
   },
   parserOptions: {
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
 };
