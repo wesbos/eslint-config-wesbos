@@ -15,7 +15,7 @@
 		"printDeps": "node -p -e \"Object.entries(require('./package.json').peerDependencies).reduce((accumulator, [key, value]) => accumulator + ' ' + key + '@' + value, '')\"",
 		"update": "      yarn        add $(yarn -s printDeps)",
 		"updateGlobal": "yarn global add $(yarn -s printDeps)",
-		"send-it": "yarn version --patch && yarn publish"
+		"send-it": "yarn version --patch && npm whoami && npm publish"
 	},
 	"peerDependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.11.0",
