@@ -47,14 +47,18 @@ module.exports = {
 		"@typescript-eslint/no-use-before-define": 0 /** allow `const foo = require("bar");` in typescript */,
 		"@typescript-eslint/consistent-type-assertions": 0 /** allow let a: T = <T>"something of type T" */,
 		"@typescript-eslint/no-empty-function": 1,
+		"@typescript-eslint/no-empty-interface": 1,
 		"@typescript-eslint/ban-types": 1,
 		"@typescript-eslint/ban-ts-comment": 1,
 		"@typescript-eslint/interface-name-prefix": 0 /** it's suggested in the typescript's own codebase, but not in general projects */,
+		"@typescript-eslint/camelcase": 0,
+		"@typescript-eslint/no-explicit-any": 1,
 
 		/** end typescript-specific */
 
 		/** flow-specific */
 		"flowtype/no-types-missing-file-annotation": 0,
+		"flowtype/space-after-type-colon": 0,
 
 		/** end flow-specific */
 
@@ -70,6 +74,9 @@ module.exports = {
 		"eslint-disable max-classes-per-file": 0,
 		"eslint-disable lines-between-class-members": 0,
 		"no-nested-ternary": 0,
+		"no-return-await": 0,
+
+		"no-whitespace-before-property": 1,
 
 		/** end disable meh stuff */
 
@@ -121,6 +128,7 @@ module.exports = {
 		"jsx-a11y/accessible-emoji": 0,
 		"react/require-default-props": 0,
 		"react/jsx-props-no-spreading": 0,
+		"react/jsx-no-target-blank": 0,
 		"react/button-has-type": 1,
 		"react/jsx-filename-extension": [
 			1,
