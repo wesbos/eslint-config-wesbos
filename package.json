@@ -16,6 +16,7 @@
   "author": "Wes bos <wes@wesbos.com>",
   "license": "MIT",
   "peerDependencies": {
+    "@babel/core": "^7.15.8",
     "@types/node": "^16.7.13",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
@@ -35,6 +36,7 @@
     "@babel/preset-react": "^7.14.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
     "@types/node": "^16.7.13",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
