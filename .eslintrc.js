@@ -53,6 +53,7 @@ module.exports = {
 		"@typescript-eslint/interface-name-prefix": 0 /** it's suggested in the typescript's own codebase, but not in general projects */,
 		"@typescript-eslint/camelcase": 0,
 		"@typescript-eslint/no-explicit-any": 1,
+		"@typescript-eslint/no-angle-bracket-type-assertion": 0, // is way more useful at times
 
 		/** end typescript-specific */
 
