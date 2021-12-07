@@ -167,3 +167,22 @@ Same instructions as above, just make sure you extend `wesbos/typescript` instea
 ## With Yarn
 
 It should just work, but if they aren't showing up in your package.json, try `npx install-peerdeps --dev eslint-config-wesbos -Y`
+
+## Issues with ESLint not formatting code
+
+If you experience issues with ESLint not formatting the code or you receive a `Parsing error: Cannot find module '@babel/preset-react` error message then you need to check that you opened the folder where you installed and configured ESLint directly in VS Code. The correct folder to open will be the one where you installed the `eslint-config-wesbos` npm package and where you created the `.eslintrc` file.
+
+Opening a parent folder or child folder in your code editor will cause ESLint to fail in finding the ESLint npm packages and the formatting won't work.
+
+```sh
+your-username
+  |
+  projects
+    |
+    beginner-javascript # <- Open this folder directly in your code editor
+      .eslintrc
+      package.json
+      node_modules/
+      exercises/
+      playground/
+```
