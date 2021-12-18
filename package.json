@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-sarpik",
-	"version": "0.2.14",
+	"version": "0.2.15",
 	"description": "ESLint, Prettier and TypeScript setup from Kipras",
 	"main": "index.js",
 	"author": "Kipras Melnikovas <kipras@kipras.org> (https://kipras.org)",
