@@ -54,6 +54,7 @@ module.exports = {
 		"@typescript-eslint/camelcase": 0,
 		"@typescript-eslint/no-explicit-any": 1,
 		"@typescript-eslint/no-angle-bracket-type-assertion": 0, // is way more useful at times
+		"@typescript-eslint/no-var-requires": 0,
 
 		/** end typescript-specific */
 
