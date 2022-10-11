@@ -33,8 +33,8 @@ module.exports = {
         ignoreDeclarationMerge: true,
       },
     ],
-    'no-unused-vars': 0,
     '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
   },
   parserOptions: {
     project: './tsconfig.json',
