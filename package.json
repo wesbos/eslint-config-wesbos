@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wesbos",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "ESLint and Prettier Config from Wes Bos",
   "keywords": [
     "javascript",

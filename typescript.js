@@ -36,6 +36,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off',
     // this is covered by the typescript compiler, so we don't need it
     'no-undef': 'off',
+    'no-shadow': 'off', // TS does it
   },
   parserOptions: {
     project: './tsconfig.json',
