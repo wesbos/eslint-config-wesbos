@@ -5,8 +5,11 @@ ESLint configs can't have dependencies, so we rely on people using peerDeps. whi
 
 I'd love to offer:
 
-1. JavaSCript DOM
-2. JavaSCript Node
+1. Plain ol JavaSCript + Node.js
+2. 1, but in TypeScript
+3. React in JavaSCript
+4. 3, but in TypeScript
+5. This will open it up for other frameworks like Svelte and custom elements
 
 Investigate if we can bundle parts of this config so we don't need all the peer deps.
 
