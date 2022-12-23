@@ -1,5 +1,3 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
-
 module.exports = {
   extends: ['airbnb', 'prettier'],
   parser: '@babel/eslint-parser',
