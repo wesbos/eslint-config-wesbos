@@ -7,7 +7,7 @@ module.exports = {
   parserOptions: {
     requireConfigFile: false,
     babelOptions: {
-      presets: [require.resolve('@babel/preset-react')],
+      presets: ['@babel/preset-react'],
     },
   },
   env: {
