@@ -44,9 +44,11 @@ module.exports = {
     ],
     'arrow-body-style': [2, 'as-needed'],
     'no-unused-expressions': [
-      2,
+      'error',
       {
         allowTaggedTemplates: true,
+        allowShortCircuit: true,
+        allowTernary: true,
       },
     ],
     'no-param-reassign': [
