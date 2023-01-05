@@ -67,7 +67,7 @@ TypeScript users will also need a `tsconfig.json` file in their project. An empt
 
 ## Settings
 
-If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"` while [prettier options](https://prettier.io/docs/en/options.html) go under `"prettier/prettier"`. Note that prettier rules overwrite anything in my config (trailing comma, and single quote), so you'll need to include those as well.
+If you'd like to overwrite eslint or prettier settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"`.
 
 ```js
 {
@@ -76,17 +76,47 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
   ],
   "rules": {
     "no-console": 2,
+  }
+}
+```
+
+### Prettier Rules
+
+There are only 2 prettier rules included in my config - `singleQuote: true` and `endOfLine: 'auto'`.
+
+If you want custom [prettier options](https://prettier.io/docs/en/options.html), it's recommended to create a `.prettierrc` file in your root directory like so:
+
+```js
+{
+  "singleQuote": true,
+  "endOfLine": "auto",
+  "tabWidth": 4
+}
+```
+
+You can also put this in your EsLint config as a rule like so:
+
+```json
+{
+  "extends": ["wesbos"],
+  "rules": {
+    ... any eslint rules here
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 120,
-        "tabWidth": 8,
-      }
-    ]
+        "endOfLine": "auto",
+        "tabWidth": 4
+      },
+    ],
   }
 }
+```
+
+Note if you are switching to double quotes, you'll also need to add this eslint rule, or they will fight to the death!
+
+```js
+quotes: ["error", "double"];
 ```
 
 ## With VS Code
@@ -125,7 +155,6 @@ Finally you'll usually need to restart VS code. They say you don't need to, but 
 ## With Gatsby
 
 1. Run `npx install-peerdeps --dev eslint-config-wesbos`
-1. If you have an existing `.prettierrc` file, delete it.
 1. follow the `Local / Per Project Install` steps above
 
 ## With WSL
