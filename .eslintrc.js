@@ -33,7 +33,10 @@ module.exports = {
       1,
       {
         ignoreRestSiblings: true,
-        argsIgnorePattern: 'res|next|^err',
+        // Ignore req,res,next, err* and _*
+        argsIgnorePattern: 'req|res|next|^err|^_',
+        varsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
       },
     ],
     'prefer-const': [
