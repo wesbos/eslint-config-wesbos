@@ -33,10 +33,10 @@ module.exports = {
       1,
       {
         ignoreRestSiblings: true,
-        // Ignore req,res,next, err* and _*
-        argsIgnorePattern: 'req|res|next|^err|^_',
+        argsIgnorePattern: 'res|next|^err',
         varsIgnorePattern: '^_',
-        destructuredArrayIgnorePattern: '^_',
+        // Broken in TypeSCript.Want this turned on
+        // destructuredArrayIgnorePattern: '^_',
       },
     ],
     'prefer-const': [
