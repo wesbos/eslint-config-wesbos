@@ -135,8 +135,6 @@ Once you have done one, or both, of the above installs. You probably want your e
 "[javascript][javascriptreact][typescript][typescriptreact]": {
   "editor.formatOnSave": false
 },
-// show eslint icon at bottom toolbar
-"eslint.alwaysShowStatus": true,
 // tell the ESLint plugin to run on save
 "editor.codeActionsOnSave": {
   "source.fixAll": true
