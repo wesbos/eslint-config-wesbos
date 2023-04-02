@@ -137,8 +137,8 @@ Once you have done one, or both, of the above installs. You probably want your e
 },
 // tell the ESLint plugin to run on save
 "editor.codeActionsOnSave": {
-  "source.fixAll": true
-}
+  "source.fixAll.eslint": true
+},
 ```
 
 After attempting to lint your file for the first time, you may need to click on 'ESLint' in the bottom right and select 'Allow Everywhere' in the alert window.
