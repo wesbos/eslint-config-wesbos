@@ -1,8 +1,30 @@
-// This is a patch so that eslint will load the plugins as dependencies. Otherwise we can to install EVERYTHING in th root project
+// This is a patch so that eslint will load the plugins as dependencies. Otherwise we have to install EVERYTHING in th root project
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
-  extends: ['airbnb', 'prettier'],
+  env: {
+    browser: true,
+    node: true,
+    es2020: true,
+    jquery: true,
+    jest: true,
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'airbnb',
+    'prettier',
+    'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
+  ],
+  plugins: ['html', 'prettier', 'react-hooks', 'import', 'simple-import-sort'],
   parser: '@babel/eslint-parser',
   parserOptions: {
     requireConfigFile: false,
@@ -10,27 +32,22 @@ module.exports = {
       presets: ['@babel/preset-react'],
     },
   },
-  env: {
-    browser: true,
-    node: true,
-    jquery: true,
-    jest: true,
-  },
+  ignorePatterns: ['node_modules/', '.next/'],
   rules: {
-    'no-debugger': 0,
+    'no-alert': 'off',
+    'no-console': 'off',
+    'no-debugger': 'off',
     'no-use-before-define': 'off',
-    'import/no-cycle': 'off',
-    'no-alert': 0,
-    'no-await-in-loop': 0,
+    'no-await-in-loop': 'off',
     'no-return-assign': ['error', 'except-parens'],
     'no-restricted-syntax': [
-      2,
+      'error',
       'ForInStatement',
       'LabeledStatement',
       'WithStatement',
     ],
     'no-unused-vars': [
-      1,
+      'warn',
       {
         ignoreRestSiblings: true,
         argsIgnorePattern: 'res|next|^err|^_',
@@ -45,7 +62,7 @@ module.exports = {
         destructuring: 'all',
       },
     ],
-    'arrow-body-style': [2, 'as-needed'],
+    'arrow-body-style': ['error', 'as-needed'],
     'no-unused-expressions': [
       'error',
       {
@@ -55,76 +72,80 @@ module.exports = {
       },
     ],
     'no-param-reassign': [
-      2,
+      'error',
       {
         props: false,
       },
     ],
-    'no-console': 0,
-    'import/prefer-default-export': 0,
-    import: 0,
-    'func-names': 0,
-    'space-before-function-paren': 0,
-    'comma-dangle': 0,
-    'max-len': 0,
-    'import/extensions': 0,
-    'no-underscore-dangle': 0,
-    'consistent-return': 0,
-    'react/display-name': 1,
-    'react/no-array-index-key': 0,
-    'react/react-in-jsx-scope': 0,
-    'react/prefer-stateless-function': 0,
-    'react/forbid-prop-types': 0,
-    'react/no-unescaped-entities': 0,
-    'react/function-component-definition': 0,
-    'jsx-a11y/accessible-emoji': 0,
-    'jsx-a11y/label-has-associated-control': [
-      'error',
-      {
-        assert: 'either',
-      },
-    ],
-    'react/require-default-props': 0,
-    'react/jsx-filename-extension': [
-      1,
-      {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
-      },
-    ],
-    radix: 0,
-    'no-shadow': [
-      2,
-      {
-        hoist: 'all',
-        allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
-      },
-    ],
-    quotes: [
-      2,
-      'single',
-      {
-        avoidEscape: true,
-        allowTemplateLiterals: true,
-      },
-    ],
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        endOfLine: 'auto',
-      },
-    ],
-    'jsx-a11y/href-no-hash': 'off',
+    import: 'off',
+    'import/no-cycle': 'off',
+    'import/prefer-default-export': 'off',
+    'import/newline-after-import': 'error',
+    'import/extensions': 'off',
+    'func-names': 'off',
+    'space-before-function-paren': 'off',
+    'comma-dangle': 'off',
+    'max-len': 'off',
+    'no-underscore-dangle': 'off',
+    'consistent-return': 'off',
+    'react/button-has-type': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/function-component-definition': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-array-index-key': 'off',
+    'react/prefer-stateless-function': 'off',
     'jsx-a11y/anchor-is-valid': [
       'warn',
       {
         aspects: ['invalidHref'],
       },
     ],
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        assert: 'either',
+      },
+    ],
+    'react/require-default-props': 'off',
+    'react/jsx-filename-extension': [
+      'warn',
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
+      },
+    ],
+    radix: 'off',
+    'no-shadow': [
+      'error',
+      {
+        hoist: 'all',
+        allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
+      },
+    ],
+    quotes: [
+      'error',
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
+    'jsx-quotes': ['error', 'prefer-double'],
+    'prettier/prettier': [
+      'error',
+      {
+        quoteProps: 'as-needed',
+        semi: true,
+        singleQuote: true,
+        trailingComma: 'es5',
+        jsxSingleQuote: false,
+      },
+    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/comma-dangle': ['off'],
-    'react/jsx-props-no-spreading': 'off',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
   },
-  plugins: ['html', 'prettier', 'react-hooks'],
 };

@@ -1,11 +1,11 @@
 {
-	"include": ["./**/*"],
-	"compilerOptions": {
-		"module": "esnext",
-		"target": "esnext",
-		"moduleResolution": "node",
-		"strict": true,
-		"lib": ["ESNext", "DOM", "DOM.Iterable"],
-		"skipLibCheck": true
-	}
+  "include": ["./**/*"],
+  "compilerOptions": {
+    "module": "es2020",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "strict": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true
+  }
 }

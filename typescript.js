@@ -23,9 +23,9 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-explicit-any': 'off',
-    'no-unused-vars': 0,
+    'no-unused-vars': 1,
     '@typescript-eslint/no-unused-vars': [1, { ignoreRestSiblings: true }],
-    'no-redeclare': 'off',
+    'no-redeclare': 1,
     '@typescript-eslint/no-redeclare': [
       'warn',
       {

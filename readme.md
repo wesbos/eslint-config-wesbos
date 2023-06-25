@@ -1,5 +1,6 @@
 # No-Sweat™ Eslint and Prettier Setup
 
+Modified from [wesbos/eslint-config-wesbos](https://github.com/wesbos/eslint-config-wesbos)
 These are my settings for ESLint and Prettier
 
 You might like them - or you might not. Don't worry you can always change them.
@@ -10,29 +11,27 @@ You might like them - or you might not. Don't worry you can always change them.
 - Fixes issues and formatting errors with Prettier
 - Lints + Fixes inside of html script tags
 - Lints + Fixes React via eslint-config-airbnb
-- You can see all the [rules here](https://github.com/wesbos/eslint-config-wesbos/blob/master/.eslintrc.js) - these generally abide by the code written in my courses. You are very welcome to overwrite any of these settings, or just fork the entire thing to create your own.
+- You can see all the [rules here](https://github.com/frontendfixer/eslint-config-wesbos-extended/blob/master/.eslintrc.js) - these generally abide by the code written in my courses. You are very welcome to overwrite any of these settings, or just fork the entire thing to create your own.
 
 ## Project Install
 
 It's recommended you install this once per every project. ESLint used to have global configs, but no longer.
-
-<!-- TODO: Make an updated Youtube video -->
 
 1. If you don't already have a `package.json` file, create one with `npm init -y`.
 
 2. Then we need to install this config
 
 ```
-npm install eslint-config-wesbos
+npm install eslint-config-wesbos-extended
 ```
 
-4. We need to put our eslint settings in a file in the root of your project. I prefer to use our existing `package.json`, and add an `eslintConfig` property. You can also create a new `.eslintrc` or `.eslintrc.js` file that lives where package.json does:
+1. We need to put our eslint settings in a file in the root of your project. You can create a new `.eslintrc` or `.eslintrc.js` file that lives where package.json does:
 
 **in package.json**, add this anywhere top level. Like right under your "scripts" object.
 
 ```json
 "eslintConfig": {
-  "extends": ["wesbos"]
+  "extends": ["wesbos-extended"]
 }
 ```
 
@@ -40,21 +39,27 @@ Or put this in a `.eslintrc` file
 
 ```json
 {
-  "extends": ["wesbos"]
+  "extends": ["wesbos-extended"]
 }
 ```
 
-For TypeScript projects, use `wesbos/typescript`.
+For TypeScript projects, use `wesbos-extended/typescript`.
 
-```json
-{
-  "extends": ["wesbos/typescript"]
-}
+```js
+module.exports = {
+  extends: ["wesbos-extended"],
+  overrides: [
+    {
+      files: "**/*.{ts,tsx}",
+      extends: ["wesbos-extended/typescript"],
+    },
+  ],
+};
 ```
 
-TypeScript users will also need a `tsconfig.json` file in their project. An empty object (`{}`) or [my base](https://github.com/wesbos/dotfiles/blob/master/tsconfig.json) will do!
+TypeScript users will also need a `tsconfig.json` file in their project. An empty object (`{}`) will do!
 
-5. You can add two scripts to your package.json to lint and/or fix:
+1. You can add two scripts to your package.json to lint and/or fix:
 
 ```json
 "scripts": {
@@ -72,41 +77,42 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
 ```js
 {
   "extends": [
-    "wesbos"
+    "wesbos-extended"
   ],
   "rules": {
-    "no-console": 2,
+    "no-console": "error",
   }
 }
+// You can also use {0, 1, 2} for {"off", "warn", "error"}
 ```
 
 ### Prettier Rules
 
-There are only 2 prettier rules included in my config - `singleQuote: true` and `endOfLine: 'auto'`.
-
-If you want custom [prettier options](https://prettier.io/docs/en/options.html), it's recommended to create a `.prettierrc` file in your root directory like so:
+By default these rules are enable.
 
 ```js
 {
-  "singleQuote": true,
-  "endOfLine": "auto",
-  "tabWidth": 4
+  quoteProps: "as-needed",
+  semi: true,
+  singleQuote: true,
+  trailingComma: "es5",
+  jsxSingleQuote: false,
 }
 ```
+
+If you want custom [prettier options](https://prettier.io/docs/en/options.html), it's recommended to create a `.prettierrc` file in your root directory like so:
 
 You can also put this in your EsLint config as a rule like so:
 
 ```json
 {
-  "extends": ["wesbos"],
+  "extends": ["wesbos-extended"],
   "rules": {
     ... any eslint rules here
     "prettier/prettier": [
       "error",
       {
-        "singleQuote": true,
-        "endOfLine": "auto",
-        "tabWidth": 4
+        // your rules
       },
     ],
   }
@@ -147,12 +153,12 @@ Finally you'll usually need to restart VS code. They say you don't need to, but 
 
 ## With Create React App
 
-1. Run `npx install-peerdeps --dev eslint-config-wesbos`
-1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "wesbos"`
+1. Run `npx install-peerdeps --dev eslint-config-wesbos-extended`
+1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "wesbos-extended"`
 
 ## With Gatsby
 
-1. Run `npx install-peerdeps --dev eslint-config-wesbos`
+1. Run `npx install-peerdeps --dev eslint-config-wesbos-extended`
 1. follow the `Local / Per Project Install` steps above
 
 ## With WSL
@@ -190,7 +196,7 @@ The following steps are for a typical Node / ESLint global installtion. If you h
 
 ## With Typescript
 
-Same instructions as above, just make sure you extend `wesbos/typescript` instead of just `wesbos`.
+Same instructions as above, just make sure you extend `wesbos/typescript` instead of just `wesbos-extended`.
 
 ## With Yarn
 
@@ -202,7 +208,7 @@ It should just work! Open an issue if not.
 
 ## Issues with ESLint not formatting code
 
-If you experience issues with ESLint not formatting the code or you receive a `Parsing error: Cannot find module '@babel/preset-react` error message then you need to check that you opened the folder where you installed and configured ESLint directly in VS Code. The correct folder to open will be the one where you installed the `eslint-config-wesbos` npm package and where you created the `.eslintrc` file.
+If you experience issues with ESLint not formatting the code or you receive a `Parsing error: Cannot find module '@babel/preset-react` error message then you need to check that you opened the folder where you installed and configured ESLint directly in VS Code. The correct folder to open will be the one where you installed the `eslint-config-wesbos-extended` npm package and where you created the `.eslintrc` file.
 
 Opening a parent folder or child folder in your code editor will cause ESLint to fail in finding the ESLint npm packages and the formatting won't work.
 

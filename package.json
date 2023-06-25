@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-wesbos",
-  "version": "3.2.3",
-  "description": "ESLint and Prettier Config from Wes Bos",
+  "name": "eslint-config-wesbos-extended",
+  "version": "1.0.0",
+  "description": "ESLint and Prettier Config from Wes Bos and extended",
   "keywords": [
     "javascript",
     "typescript",
@@ -13,8 +13,8 @@
     "prettier"
   ],
   "main": "index.js",
-  "repository": "git@github.com:wesbos/eslint-config-wesbos.git",
-  "author": "Wes bos <wes@wesbos.com>",
+  "repository": "git@github.com:frontendfixer/eslint-config-wesbos-extended.git",
+  "author": "Lakshmikanta Patra <frontendfixer@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "eslint": "^8.0.0",
@@ -41,12 +41,12 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "eslint-plugin-simple-import-sort": "^7.0.0"
   },
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint --fix",
-    "bump:beta": "npm version prerelease --preid beta",
-    "publish:beta": "npm publish --tag beta"
+    "lint:fix": "eslint --fix"
   }
 }
