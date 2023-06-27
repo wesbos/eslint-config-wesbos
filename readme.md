@@ -21,8 +21,16 @@ It's recommended you install this once per every project. ESLint used to have gl
 
 2. Then we need to install this config
 
+- with NPM
+
 ```
-npm install eslint-config-wesbos-extended
+npm install -D eslint-config-wesbos-extended
+```
+
+- with PNPM
+
+```
+pnpm add -D eslint-config-wesbos-extended
 ```
 
 1. We need to put our eslint settings in a file in the root of your project. You can create a new `.eslintrc` or `.eslintrc.js` file that lives where package.json does:
