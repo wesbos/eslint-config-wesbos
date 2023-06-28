@@ -14,7 +14,8 @@
   ],
   "main": "index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
   },
   "repository": "git@github.com:frontendfixer/-frontendfixer-eslint-config-wesbos.git",
   "author": "Lakshmikanta Patra <frontendfixer@gmail.com>",
@@ -51,6 +52,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "changeset": "changeset",
     "release": "changeset publish"
   },
   "devDependencies": {
