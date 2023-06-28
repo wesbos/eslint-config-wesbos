@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-wesbos-extended",
+  "name": "@frontendfixer/eslint-config-wesbos",
   "version": "1.0.9",
   "description": "ESLint and Prettier Config from Wes Bos and extended",
   "keywords": [
@@ -13,7 +13,10 @@
     "prettier"
   ],
   "main": "index.js",
-  "repository": "git@github.com:frontendfixer/eslint-config-wesbos-extended.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": "git@github.com:frontendfixer/-frontendfixer-eslint-config-wesbos.git",
   "author": "Lakshmikanta Patra <frontendfixer@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
