@@ -4,7 +4,7 @@ on:
     branches:
       - main
 concurrency: ${{ github.workflow }}-${{ github.ref }}
-permissions: {} #reset
+permissions: write-all
 jobs:
   release:
     name: Release
