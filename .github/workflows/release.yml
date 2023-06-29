@@ -1,37 +1,39 @@
-name: Release
+name: Release NPM Package
+
 on:
   push:
     branches:
       - main
-    paths:
-      - 'src/**'
-      - '.github/workflows/release.yml'
+  workflow_dispatch:
+
 concurrency: ${{ github.workflow }}-${{ github.ref }}
-permissions: write-all
+
 jobs:
   release:
-    name: Release
+    name: Release Package
+    if: github.repository == 'frontendfixer/-frontendfixer-eslint-config-wesbos'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: Use Node.js 16
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: 'pnpm'
+          node-version: latest
           registry-url: 'https://registry.npmjs.org'
           scope: '@frontendfixer'
-      - name: Install dependencies
-        run: pnpm install
-      - run: pnpm install --frozen-lockfile
+
+      - name: Install Dependencies
+        run: yarn
+
       - name: Create Release Pull Request or Publish to npm
-        id: changesets
+        # https://github.com/changesets/action
         uses: changesets/action@v1
         with:
-          publish: pnpm release
+          # this expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: yarn release
+          version: yarn version-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

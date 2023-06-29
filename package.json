@@ -29,6 +29,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "changeset": "changeset",
+    "version-packages": "changeset version",
     "release": "changeset publish"
   },
   "peerDependencies": {
