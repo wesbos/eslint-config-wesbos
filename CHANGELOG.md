@@ -1,5 +1,18 @@
 # @frontendfixer/eslint-config-wesbos
 
+## 1.1.1
+
+### Patch Changes
+
+- c7a26a2: **eslintrc.js**
+
+  - allow 'no-plusplus' for 'forloop'
+  - disable react-in-jsx-scope
+
+- d0306ba: **.eslintrc.js/typescript.js**
+
+  - rules sort by a-z
+
 ## 1.1.0
 
 ### Minor Changes
