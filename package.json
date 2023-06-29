@@ -14,7 +14,7 @@
   ],
   "main": "index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "repository": "git@github.com:frontendfixer/-frontendfixer-eslint-config-wesbos.git",
