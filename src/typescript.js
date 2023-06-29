@@ -41,6 +41,6 @@ module.exports = {
     // this is covered by the typescript compiler, so we don't need it
   },
   parserOptions: {
-    project: './tsconfig.json',
+    project: '../tsconfig.json',
   },
 };

@@ -22,7 +22,7 @@
   "license": "MIT",
   "eslintConfig": {
     "extends": [
-      "./.eslintrc.js"
+      "./src/.eslintrc.js"
     ]
   },
   "scripts": {
