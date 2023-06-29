@@ -15,6 +15,10 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   // Then we add our own custom typescript rules
   rules: {
+    '@typescript-eslint/comma-dangle': 'off',
+    '@typescript-eslint/naming-convention': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-floating-promises': 'off',
     // This allows us to use async function on addEventListener(). Discussion: https://twitter.com/wesbos/status/1337074242161172486
     '@typescript-eslint/no-misused-promises': [
       'error',
@@ -22,21 +26,19 @@ module.exports = {
         checksVoidReturn: false,
       },
     ],
-    '@typescript-eslint/no-explicit-any': 'off',
-    'no-unused-vars': 1,
-    '@typescript-eslint/no-unused-vars': [1, { ignoreRestSiblings: true }],
-    'no-redeclare': 1,
     '@typescript-eslint/no-redeclare': [
       'warn',
       {
         ignoreDeclarationMerge: true,
       },
     ],
-    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
     '@typescript-eslint/no-use-before-define': 'off',
-    // this is covered by the typescript compiler, so we don't need it
-    'no-undef': 'off',
+    'no-redeclare': 'warn',
     'no-shadow': 'off', // TS does it
+    'no-unused-vars': 'warn',
+    'no-undef': 'off',
+    // this is covered by the typescript compiler, so we don't need it
   },
   parserOptions: {
     project: './tsconfig.json',

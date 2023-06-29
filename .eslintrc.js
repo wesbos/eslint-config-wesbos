@@ -5,7 +5,8 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es2020: true,
+    commonjs: true,
+    es6: true,
     jquery: true,
     jest: true,
   },
@@ -24,7 +25,14 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
   ],
-  plugins: ['html', 'prettier', 'react-hooks', 'import', 'simple-import-sort'],
+  plugins: [
+    'html',
+    'import',
+    'prettier',
+    'react',
+    'react-hooks',
+    'simple-import-sort',
+  ],
   parser: '@babel/eslint-parser',
   parserOptions: {
     requireConfigFile: false,
@@ -34,66 +42,15 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/', '.next/'],
   rules: {
-    'no-alert': 'off',
-    'no-console': 'off',
-    'no-debugger': 'off',
-    'no-use-before-define': 'off',
-    'no-await-in-loop': 'off',
-    'no-return-assign': ['error', 'except-parens'],
-    'no-restricted-syntax': [
-      'error',
-      'ForInStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
-    'no-unused-vars': [
-      'warn',
-      {
-        ignoreRestSiblings: true,
-        argsIgnorePattern: 'res|next|^err|^_',
-        varsIgnorePattern: '^_',
-        // Broken in TypeSCript.Want this turned on
-        // destructuredArrayIgnorePattern: '^_',
-      },
-    ],
-    'prefer-const': [
-      'error',
-      {
-        destructuring: 'all',
-      },
-    ],
     'arrow-body-style': ['error', 'as-needed'],
-    'no-unused-expressions': [
-      'error',
-      {
-        allowTaggedTemplates: true,
-        allowShortCircuit: true,
-        allowTernary: true,
-      },
-    ],
-    'no-param-reassign': [
-      'error',
-      {
-        props: false,
-      },
-    ],
     import: 'off',
+    'comma-dangle': 'off',
+    'consistent-return': 'off',
+    'func-names': 'off',
     'import/no-cycle': 'off',
     'import/prefer-default-export': 'off',
     'import/newline-after-import': 'error',
     'import/extensions': 'off',
-    'func-names': 'off',
-    'space-before-function-paren': 'off',
-    'comma-dangle': 'off',
-    'max-len': 'off',
-    'no-underscore-dangle': 'off',
-    'consistent-return': 'off',
-    'react/button-has-type': 'off',
-    'react/forbid-prop-types': 'off',
-    'react/function-component-definition': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/no-array-index-key': 'off',
-    'react/prefer-stateless-function': 'off',
     'jsx-a11y/anchor-is-valid': [
       'warn',
       {
@@ -108,14 +65,25 @@ module.exports = {
         assert: 'either',
       },
     ],
-    'react/require-default-props': 'off',
-    'react/jsx-filename-extension': [
-      'warn',
+    'jsx-quotes': ['error', 'prefer-double'],
+    'max-len': 'off',
+    'no-alert': 'off',
+    'no-await-in-loop': 'off',
+    'no-console': 'off',
+    'no-debugger': 'off',
+    'no-param-reassign': [
+      'error',
       {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
+        props: false,
       },
     ],
-    radix: 'off',
+    'no-restricted-syntax': [
+      'error',
+      'ForInStatement',
+      'LabeledStatement',
+      'WithStatement',
+    ],
+    'no-return-assign': ['error', 'except-parens'],
     'no-shadow': [
       'error',
       {
@@ -123,15 +91,32 @@ module.exports = {
         allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
       },
     ],
-    quotes: [
+    'no-underscore-dangle': 'off',
+    'no-unused-expressions': [
       'error',
-      'single',
       {
-        avoidEscape: true,
-        allowTemplateLiterals: true,
+        allowTaggedTemplates: true,
+        allowShortCircuit: true,
+        allowTernary: true,
       },
     ],
-    'jsx-quotes': ['error', 'prefer-double'],
+    'no-unused-vars': [
+      'warn',
+      {
+        ignoreRestSiblings: true,
+        argsIgnorePattern: 'res|next|^err|^_',
+        varsIgnorePattern: '^_',
+        // Broken in TypeSCript.Want this turned on
+        // destructuredArrayIgnorePattern: '^_',
+      },
+    ],
+    'no-use-before-define': 'off',
+    'prefer-const': [
+      'error',
+      {
+        destructuring: 'all',
+      },
+    ],
     'prettier/prettier': [
       'error',
       {
@@ -142,9 +127,31 @@ module.exports = {
         jsxSingleQuote: false,
       },
     ],
+    quotes: [
+      'error',
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
+    radix: 'off',
+    'space-before-function-paren': 'off',
+    'react/button-has-type': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/function-component-definition': 'off',
+    'react/jsx-filename-extension': [
+      'warn',
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
+      },
+    ],
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-array-index-key': 'off',
+    'react/prefer-stateless-function': 'off',
+    'react/require-default-props': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    '@typescript-eslint/comma-dangle': ['off'],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
   },
