@@ -1,5 +1,11 @@
 # @frontendfixer/eslint-config-wesbos
 
+## 1.1.2
+
+### Patch Changes
+
+- 80f0651: remove @changesets/changelog-github
+
 ## 1.1.1
 
 ### Patch Changes
