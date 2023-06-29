@@ -1,5 +1,11 @@
 # @frontendfixer/eslint-config-wesbos
 
+## 1.2.1
+
+### Patch Changes
+
+- [`16033ac`](https://github.com/frontendfixer/-frontendfixer-eslint-config-wesbos/commit/16033acb2eb9f24f8628397c180fd55896577ee9) - add @changesets/changelog-github
+
 ## 1.2.0
 
 ### Minor Changes
