@@ -1,5 +1,15 @@
 # @frontendfixer/eslint-config-wesbos
 
+## 1.2.0
+
+### Minor Changes
+
+- 4463abd: **project folder structure change**
+
+  - create src/ directory
+  - move .eslintrc.js and typescript.js file to src/
+  - change eslint config location in package.json file
+
 ## 1.1.3
 
 ### Patch Changes
