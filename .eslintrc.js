@@ -150,6 +150,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/no-array-index-key': 'off',
     'react/prefer-stateless-function': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
