@@ -77,6 +77,7 @@ module.exports = {
         props: false,
       },
     ],
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'no-restricted-syntax': [
       'error',
       'ForInStatement',
