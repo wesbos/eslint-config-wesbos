@@ -1,6 +1,6 @@
 # No-Sweat™ Eslint and Prettier Setup
 
-Modified from [wesbos/eslint-config-wesbos](https://github.com/wesbos/eslint-config-wesbos)
+Modified from [**wesbos/eslint-config-wesbos**](https://github.com/wesbos/eslint-config-wesbos)
 These are my settings for ESLint and Prettier
 
 You might like them - or you might not. Don't worry you can always change them.
@@ -23,14 +23,14 @@ It's recommended you install this once per every project. ESLint used to have gl
 
 - with NPM
 
-```
-npm install -D eslint-config-wesbos-extended
+```bash
+npm install -D @frontendfixer/eslint-config-wesbos
 ```
 
 - with PNPM
 
-```
-pnpm add -D eslint-config-wesbos-extended
+```bash
+pnpm add -D @frontendfixer/eslint-config-wesbos
 ```
 
 1. We need to put our eslint settings in a file in the root of your project. You can create a new `.eslintrc` or `.eslintrc.js` file that lives where package.json does:
@@ -39,7 +39,7 @@ pnpm add -D eslint-config-wesbos-extended
 
 ```json
 "eslintConfig": {
-  "extends": ["wesbos-extended"]
+  "extends": ["@frontendfixer/wesbos"]
 }
 ```
 
@@ -47,19 +47,19 @@ Or put this in a `.eslintrc` file
 
 ```json
 {
-  "extends": ["wesbos-extended"]
+  "extends": ["@frontendfixer/wesbos"]
 }
 ```
 
-For TypeScript projects, use `wesbos-extended/typescript`.
+For TypeScript projects, use `@frontendfixer/wesbos/typescript`.
 
 ```js
 module.exports = {
-  extends: ["wesbos-extended"],
+  extends: ['@frontendfixer/wesbos'],
   overrides: [
     {
-      files: "**/*.{ts,tsx}",
-      extends: ["wesbos-extended/typescript"],
+      files: '**/*.{ts,tsx}',
+      extends: ['@frontendfixer/wesbos/typescript'],
     },
   ],
 };
@@ -85,7 +85,7 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
 ```js
 {
   "extends": [
-    "wesbos-extended"
+    "@frontendfixer/wesbos"
   ],
   "rules": {
     "no-console": "error",
@@ -114,7 +114,7 @@ You can also put this in your EsLint config as a rule like so:
 
 ```json
 {
-  "extends": ["wesbos-extended"],
+  "extends": ["@frontendfixer/wesbos"],
   "rules": {
     ... any eslint rules here
     "prettier/prettier": [
@@ -130,10 +130,10 @@ You can also put this in your EsLint config as a rule like so:
 Note if you are switching to double quotes, you'll also need to add this eslint rule, or they will fight to the death!
 
 ```js
-quotes: ["error", "double"];
+quotes: ['error', 'double'];
 ```
 
-## With VS Code
+## With VSCode
 
 You should read this entire thing. Serious!
 
@@ -161,62 +161,21 @@ Finally you'll usually need to restart VS code. They say you don't need to, but 
 
 ## With Create React App
 
-1. Run `npx install-peerdeps --dev eslint-config-wesbos-extended`
-1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "wesbos-extended"`
+1. Run `npx install-peerdeps --dev @frontendfixer/eslint-config-wesbos`
+2. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "@frontendfixer/wesbos"`
 
 ## With Gatsby
 
-1. Run `npx install-peerdeps --dev eslint-config-wesbos-extended`
+1. Run `npx install-peerdeps --dev @frontendfixer/eslint-config-wesbos`
 1. follow the `Local / Per Project Install` steps above
-
-## With WSL
-
-It should work as above.
-
-## With JetBrains Products (IntelliJ IDEA, WebStorm, RubyMine, PyCharm, PhpStorm, etc)
-
-If you have previously configured ESLint to run via a File Watcher, [turn that off.](https://www.jetbrains.com/help/idea/using-file-watchers.html#enableFileWatcher)
-
-### If you choose Local / Per Project Install Above
-
-1. Open ESLint configuration by going to File > Settings (Edit > Preferences on Mac) > Languages & Frameworks > Code Quality Tools > ESLint (optionally just search settings for "eslint")
-1. Select **Automatic ESLint Configuration**
-1. Check **Run eslint --fix on save**
-
-### If you choose Global Install
-
-The following steps are for a typical Node / ESLint global installtion. If you have a customized setup, refer to JetBrains docs for more [ESLint Configuration Options](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_eslint_manual_configuration).
-
-1. Open ESLint configuration by going to File > Settings (Edit > Preferences on Mac) > Languages & Frameworks > Code Quality Tools > ESLint (optionally just search settings for "eslint")
-1. Select **Manual ESLint configuration**
-1. Choose your **Node interpreter** from the detected installations
-1. Select the global **ESLint package** from the dropdown
-1. Leave Configuration File as **Automatic Search**
-1. Check **Run eslint --fix on save**
-
-### Ensure the Prettier plugin is disabled if installed.
-
-1. Open Prettier configuration by going to File > Settings (Edit > Preferences on Mac) > Languages & Frameworks > Code Quality Tools > Prettier (optionally just search settings for "prettier")
-1. Uncheck both **On code reformat** and **On save**
-1. _Optional BUT IMPORTANT:_ If you have the Prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already.
-   1. Make sure the **Run for files** glob does not include `js,ts,jsx,tsx`.
-   2. An example glob for styles, config, and markdown. `{**/*,*}.{yml,css,sass,md}`
 
 ## With Typescript
 
-Same instructions as above, just make sure you extend `wesbos/typescript` instead of just `wesbos-extended`.
-
-## With Yarn
-
-It should just work! Open an issue if not.
-
-## With pnpm
-
-It should just work! Open an issue if not.
+Same instructions as above, just make sure you extend `@frontendfixer/wesbos/typescript` instead of just `@frontendfixer/wesbos`.
 
 ## Issues with ESLint not formatting code
 
-If you experience issues with ESLint not formatting the code or you receive a `Parsing error: Cannot find module '@babel/preset-react` error message then you need to check that you opened the folder where you installed and configured ESLint directly in VS Code. The correct folder to open will be the one where you installed the `eslint-config-wesbos-extended` npm package and where you created the `.eslintrc` file.
+If you experience issues with ESLint not formatting the code or you receive a `Parsing error: Cannot find module '@babel/preset-react` error message then you need to check that you opened the folder where you installed and configured ESLint directly in VS Code. The correct folder to open will be the one where you installed the `@frontendfixer/eslint-config-wesbos` npm package and where you created the `.eslintrc` file.
 
 Opening a parent folder or child folder in your code editor will cause ESLint to fail in finding the ESLint npm packages and the formatting won't work.
 
