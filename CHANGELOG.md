@@ -1,5 +1,11 @@
 # @frontendfixer/eslint-config-wesbos
 
+## 1.1.3
+
+### Patch Changes
+
+- e20c2ad: update readme
+
 ## 1.1.2
 
 ### Patch Changes
