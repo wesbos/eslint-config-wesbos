@@ -2,6 +2,7 @@
   "name": "eslint-config-wesbos",
   "version": "4.2.0",
   "description": "ESLint and Prettier Config from Wes Bos",
+  "type": "module",
   "keywords": [
     "javascript",
     "typescript",
@@ -30,6 +31,8 @@
     "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
     "@babel/preset-react": "^7.24.7",
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
     "@rushstack/eslint-patch": "^1.10.4",
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
@@ -41,12 +44,20 @@
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "^4.6.2"
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "globals": "^15.9.0"
   },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "bump:beta": "npm version prerelease --preid beta",
     "publish:beta": "npm publish --tag beta"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.9.1",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.3.0"
   }
 }
