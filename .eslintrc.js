@@ -3,13 +3,9 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   extends: ['airbnb', 'prettier'],
-  // parser: '@babel/eslint-parser',
-  // parserOptions: {
-  //   requireConfigFile: false,
-  //   babelOptions: {
-  //     presets: ['@babel/preset-react'],
-  //   },
-  // },
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
   env: {
     browser: true,
     node: true,
