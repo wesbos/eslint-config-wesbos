@@ -1,4 +1,4 @@
-# No-Sweat™ Eslint and Prettier Setup
+# No-Sweat™ ESLint and Prettier Setup
 
 These are my settings for ESLint and Prettier
 
@@ -16,7 +16,7 @@ You might like them - or you might not. Don't worry you can always change them.
 
 It's recommended you install this once per every project. ESLint used to have global configs, but no longer.
 
-<!-- TODO: Make an updated Youtube video -->
+<!-- TODO: Make an updated YouTube video -->
 
 1. If you don't already have a `package.json` file, create one with `npm init -y`.
 
@@ -184,11 +184,11 @@ The following steps are for a typical Node / ESLint global installtion. If you h
 
 1. Open Prettier configuration by going to File > Settings (Edit > Preferences on Mac) > Languages & Frameworks > Code Quality Tools > Prettier (optionally just search settings for "prettier")
 1. Uncheck both **On code reformat** and **On save**
-1. _Optional BUT IMPORTANT:_ If you have the Prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already.
+1. _Optional BUT IMPORTANT:_ If you have the Prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through ESLint already.
    1. Make sure the **Run for files** glob does not include `js,ts,jsx,tsx`.
    2. An example glob for styles, config, and markdown. `{**/*,*}.{yml,css,sass,md}`
 
-## With Typescript
+## With TypeScript
 
 Same instructions as above, just make sure you extend `wesbos/typescript` instead of just `wesbos`.
 
