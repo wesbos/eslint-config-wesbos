@@ -10,7 +10,7 @@ module.exports = {
     // Layer in all the JS Rules
     './.eslintrc.js',
   ],
-  // then add some extra good stuff for Typescript
+  // then add some extra good stuff for TypeScript
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   // Then we add our own custom typescript rules
